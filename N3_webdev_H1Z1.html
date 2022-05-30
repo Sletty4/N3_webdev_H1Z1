@@ -3,28 +3,6 @@
 <head>
 </head>
 <style>
-body{
-	background-color:#F1F1F1;
-}
-
-input{
-	background-color:blue;
-	color:white;
-}
-
-.menu{
-	color:black;
-	font-size:16px;
-	background-color:gray;
-	width:30%;
-	float:left;
-	text-align:center;
-
-	border:1px solid black;
-	padding:2px;
-	margin:5px;
-}
-
 
 </style>
 
@@ -70,69 +48,7 @@ Ne jamais boire de l'azote liquide.
 </div>
 <script language="Javascript">
 
-let videos = [
-	{
-		name:"", // à compléter
-		url:"video/BigBuckBunny_512kb.mp4",
-		duration:"", // à compléter
-		format:"MP4"
-	},
-	{
-		name:"",// à compléter
-		url:"video/Python_512kb.mp4",
-		duration:"",// à compléter
-		format:"MP4"
-	},
-	{
-		name:"",// à compléter
-		url:"video/ed_hd_512kb.mp4",
-		duration:"",// à compléter
-		format:"MP4"
-	},
-]
 
-
-
-let current_time_display = document.getElementById("current_time");
-let myvideo = document.getElementById("myvideo");
-let btplay = document.getElementById("btplay")
-let btstop = document.getElementById("btstop")
-let subtrack = document.getElementById("subtrack")
-
-let btrewind = document.getElementById("btrewind")
-let btforward = document.getElementById("btforward")
-
-let btsave = document.getElementById("btsave")
-
-let subtitles = document.getElementById("subtitles")
-
-window.onTimeUpdate = (e) => {
-
-	let current_time = new Date(Math.round(e.target.currentTime * 1000))
-	current_time.setHours(current_time.getHours() -1)
-	current_time_display.innerHTML = current_time.toLocaleTimeString("fr-FR") + " " +current_time.getMilliseconds()
-    
-};
-
-btplay.onclick = (e) => {
-	myvideo.play()
-}
-
-btstop.onclick = (e) => {
-	myvideo.pause()	
-}
-
-btforward.onclick = (e) => {
-	myvideo.currentTime = (myvideo.currentTime*1000 + 500)/1000;
-}
-
-btrewind.onclick = (e) => {
-	myvideo.currentTime = (myvideo.currentTime*1000 - 500)/1000;
-}
-
-btsave.onclick = (e) => {
-	makeLink (subtitles.value)
-}
 </script>
 <script language="Javascript"src="script.js"></script>
 
