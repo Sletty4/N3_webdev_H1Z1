@@ -35,7 +35,7 @@ let btsave = document.getElementById("btsave")
 let subtitles = document.getElementById("subtitles")
 
 window.onTimeUpdate = (e) => {
-
+	
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
 	current_time.setHours(current_time.getHours() -1)
 	current_time_display.innerHTML = current_time.toLocaleTimeString("fr-FR") + " " +current_time.getMilliseconds()
