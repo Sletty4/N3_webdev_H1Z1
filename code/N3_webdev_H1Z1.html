@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+
+</style>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<body>
+
+
+<h1>The video element</h1>
+<span class="material-icons">manage_accounts</span>
+<video width="640" height="480" id="myvideo" controls ontimeupdate="onTimeUpdate(event)" >
+  <source src="video/ed_hd_512kb.mp4" type="video/mp4">
+  <track default id="subtrack" kind="subtitles" srclang="fr" label="Anglais">
+    Your browser does not support the video tag.
+</video>
+<div id="current_time">TIME</div>
+
+<input type="button" value="<< 500ms" name="btrewind" id="btrewind">
+<input type="button" value="stop" name="btstop" id="btstop">
+<input type="button" value="play" name="btplay" id="btplay">
+<input type="button" value=">> 500ms " name="btforward" id="btforward">
+
+<div>
+<label for="subtitles"></label>
+
+<textarea id="subtitles" name="subtitles" rows="20" cols="50">
+WEBVTT
+
+00:01.000 --> 00:04.000
+Ne jamais boire de l'azote liquide.
+
+00:05.000 --> 00:09.000
+- Cela peut perforer l'estomac.
+- On peut en mourir.
+</textarea>
+</div>
+<div>
+<input type="button" value="Save" name="btsave" id="btsave">
+<a href="#" id="lnkdownload">download </a>
+</div>
+<div>
+
+</div>
+<script language="Javascript">
+
+
+</script>
+<script language="Javascript"src="script.js"></script>
+
+
+</body>
+</html>
