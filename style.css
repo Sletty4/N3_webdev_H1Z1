@@ -1,0 +1,21 @@
+body{
+	background-color:#F1F1F1;
+}
+
+input{
+	background-color:blue;
+	color:white;
+}
+
+.menu{
+	color:black;
+	font-size:16px;
+	background-color:gray;
+	width:30%;
+	float:left;
+	text-align:center;
+
+	border:1px solid black;
+	padding:2px;
+	margin:5px;
+}
