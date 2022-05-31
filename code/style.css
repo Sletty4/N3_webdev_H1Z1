@@ -8,24 +8,32 @@ input{
 	color:#FFFFFFDE;
 }
 
+div{
+	color : #FFFFFFDE;
+
+}
+
 h1{
-	font-family : Roboto Mono;
-	color : #FFFFFFDE;	
+	font-family : Roboto Mono,Regular;
+	font-weight: normal;
+	color : #FFFFFFDE;
 }
 h2{
-	font-family : Roboto;
+	font-family : Roboto, Medium;
+	font-weight: normal;
 	color : #FFFFFFDE;
 }
 h3{
-	font-family : Roboto;
+	font-family : Roboto, Medium;
 	color : #FFFFFFDE;
 }
 h4{
-	font-family : Roboto;
+	font-family : Roboto,Regular;
 	color : #828282DE;
+	margin : 3px;
 }
 h5{
-	font-family : Roboto;
+	font-family : Roboto, Medium;
 	color : #FFFFFFDE;
 }
 
