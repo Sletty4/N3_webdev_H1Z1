@@ -11,6 +11,19 @@ div{
 	color : #FFFFFFDE;
 }
 
+#video_info{
+    display: flex;
+}
+#gr_info{
+	position: relative;
+	top: 170px;
+}
+#video_player{
+	margin: 10px;
+}
+
+
+
 h1{
 	font-family : Roboto Mono,Regular;
 	font-weight: normal;
@@ -33,11 +46,6 @@ h4{
 h5{
 	font-family : Roboto, Medium;
 	color : #FFFFFFDE;
-}
-#gr_info{
-	position : absolute;
-	right : 5%;
-	top : 30%;
 }
 #optvid{
 	position : absolute;
