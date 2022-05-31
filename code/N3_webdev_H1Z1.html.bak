@@ -20,9 +20,9 @@
 <h2>Videos :</h2>
 
 <figcaption>
-<a href="video/BigBuckBunny_512kb.mp4"><img src="image/BigBuckBunny_512kb.jpg" alt="BigBuckBunny_512kb" width="160" height="120"></a>
-<a href="video/ed_hd_512kb.mp4"><img src="image/ed_hd_512kb.jpg" alt="ed_hd_512kb" width="160" height="120"></a>
-<a href="video/Python_512kb.mp4"><img src="image/Python_512kb.jpg" alt="Python_512kb" width="160" height="120"></a>
+<a href="video/BigBuckBunny_512kb.mp4"><img src="nambia1.jpg" alt="BigBuckBunny_512kb"></a>
+<a href="video/ed_hd_512kb.mp4"><img src="nambia2.jpg" alt="ed_hd_512kb"></a>
+<a href="video/Python_512kb.mp4"><img src="nambia2.jpg" alt="Python_512kb"></a>
 </figcaption>
 
 <video width="640" height="480" id="myvideo" controls ontimeupdate="onTimeUpdate(event)" >
@@ -76,7 +76,6 @@ Ne jamais boire de l'azote liquide.
 <div>
 
 </div>
-<div class="square"></div>
 <script language="Javascript">
 
 
