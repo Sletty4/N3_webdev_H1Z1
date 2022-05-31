@@ -122,7 +122,11 @@ border-radius: 16px;
 opacity: 1;
 }
 
+#videoetsoustitre {
+	
+text-align:center;
 
+}
 
 #Video_button {
 width: 450px;
@@ -191,12 +195,55 @@ margin: auto;
 
 
 #Sous-titres {
+	
+	
+margin: 34px 0;
+
 width: 469px;
 height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
 opacity: 1;
 }
 
+<<<<<<< HEAD
+
+#btcharger {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+#btappliquer {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+
+#btsauvegarder {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+
+
+
+
+=======
+>>>>>>> 490d1d62b66172cf7f1dd13e64f5137644a398e3
 #Ecriture {
 width: 927px;
 height: 245px;
