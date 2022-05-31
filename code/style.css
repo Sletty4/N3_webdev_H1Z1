@@ -11,6 +11,19 @@ div{
 	color : #FFFFFFDE;
 }
 
+#video_info{
+    display: flex;
+}
+#gr_info{
+	position: relative;
+	top: 170px;
+}
+#video_player{
+	margin: 10px;
+}
+
+
+
 h1{
 	font-family : Roboto Mono,Regular;
 	font-weight: normal;
@@ -35,11 +48,47 @@ h5{
 	color : #FFFFFFDE;
 }
 
+
+#bout{
+	position : absolute;
+	top : 220%;
+	left : 5%;
+
+}
+
+#optvid{
+	position : absolute;
+	top : 90%;
+	left : 5%;
+width : 35%;
+}
+#stitr{
+	position : absolute;
+	top : 90%;
+	right : 5%;
+
+}
+#ecrit{
+	position : absolute;
+	top : 110%;
+	left : 5%;
+
+}
 #current_time{
 	font-family : Roboto;
 	color : #FFFFFFDE;
 }
+#timlin{
+	position : absolute;
+	top : 150%;
+	left : 5%;
 
+}
+#subtit{
+	position : absolute;
+top : 180%;
+left : 5%;
+}
 .menu{
 	color:black;
 	font-size:16px;
@@ -74,8 +123,6 @@ left: 66px;
 width: 904px;
 height: 103px;
 border-bottom-style: solid;
-border-color: gray;
-
 }
 
 .playbar {
@@ -109,7 +156,7 @@ height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
 opacity: 1;
 text-align:center;
-
+margin: auto;
 }
 #btplay {
 	background: transparent url('image/Groupe 516.svg') 0% 0% no-repeat padding-box;
@@ -180,6 +227,7 @@ background: #121212 0% 0% no-repeat padding-box;
 opacity: 1;
 }
 
+<<<<<<< HEAD
 
 #btcharger {
 	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
@@ -216,6 +264,8 @@ opacity: 1;
 
 
 
+=======
+>>>>>>> 490d1d62b66172cf7f1dd13e64f5137644a398e3
 #Ecriture {
 width: 927px;
 height: 245px;
