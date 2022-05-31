@@ -34,6 +34,13 @@ h5{
 	font-family : Roboto, Medium;
 	color : #FFFFFFDE;
 }
+
+#bout{
+	position : absolute;
+	top : 220%;
+	left : 5%;
+
+}
 #gr_info{
 	position : absolute;
 	right : 5%;
