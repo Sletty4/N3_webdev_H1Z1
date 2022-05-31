@@ -1,18 +1,18 @@
 let videos = [
 	{
-		name:"", // à compléter
+		name:"BigBuckBunny", // à compléter
 		url:"video/BigBuckBunny_512kb.mp4",
 		duration:"", // à compléter
 		format:"MP4"
 	},
 	{
-		name:"",// à compléter
+		name:"Python",// à compléter
 		url:"video/Python_512kb.mp4",
 		duration:"",// à compléter
 		format:"MP4"
 	},
 	{
-		name:"",// à compléter
+		name:"ed_hd",// à compléter
 		url:"video/ed_hd_512kb.mp4",
 		duration:"",// à compléter
 		format:"MP4"
