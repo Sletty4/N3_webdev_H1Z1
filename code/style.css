@@ -1,5 +1,6 @@
 body{
 	background-color:#292929;
+
 }
  
 input{
@@ -59,6 +60,20 @@ h5{
   /* UI Properties */
   background: #121212 0% 0% no-repeat padding-box;
   opacity: 1;
+}
+.bar {
+
+top: 37px;
+left: 66px;
+width: 904px;
+height: 103px;
+border-bottom-style: solid;
+}
+
+.playbar {
+  padding-top: 50px;
+  padding-left: 80px;
+  top: 15 px;
 }
 
 
