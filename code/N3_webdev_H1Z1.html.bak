@@ -12,10 +12,12 @@
 <body>
 
 
+<div class="bar">
 <h3>projet webdev ISEN</h3>
 <h1>Groupe H1Z1</h1>
-<div class="bar">
 </div>
+
+
 <figure id="video_player">
 
 <h2>Videos :</h2>
@@ -27,7 +29,7 @@
 </figcaption>
 
 <video width="640" height="480" id="myvideo" controls ontimeupdate="onTimeUpdate(event)" >
-  <source src="video/ed_hd_512kb.mp4" type="video/mp4">
+  <source src="" type="video/mp4">
   <track default id="subtrack" kind="subtitles" srclang="fr" label="Anglais">
     Your browser does not support the video tag.
 </video>
@@ -40,11 +42,13 @@
 
 <div id="Informations">
 <h4>Fichier</h4>
+<div id="nom_video">NOM</div>
 <h4>Durée</h4>
+<div id="duree_video">DUREE</div>
 <h4>Actuel</h4>
 <div id="current_time">TIME</div>
-<h4>Actuel</h4>
-<div id="current_time">TIME</div>
+<h4>Sous-titre</h4>
+<div id="current_time">(aucun)</div>
 </div>
 
 </div>
@@ -68,6 +72,10 @@
 <div>
 <h2>Sous-titres</h2>
 <div id="Sous-titres">
+<input type="button" name="btplay" id="btplay">
+<input type="button" name="btrewind" id="btrewind">
+<input type="button" name="btforward" id="btforward">
+
 
 </div>
 </div>
@@ -137,7 +145,6 @@ Ne jamais boire de l'azote liquide.
 
 </script>
 <script language="Javascript"src="script.js"></script>
-<script language="Javascript"src="script2.js"></script>
 
 
 </body>
