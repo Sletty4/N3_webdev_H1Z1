@@ -2,25 +2,26 @@ let videos = [
 	{
 		name:"BigBuckBunny", // à compléter
 		url:"video/BigBuckBunny_512kb.mp4",
-		duration:"", // à compléter
+		duration:"00:09:56", // à compléter
 		format:"MP4"
 	},
 	{
 		name:"Python",// à compléter
 		url:"video/Python_512kb.mp4",
-		duration:"",// à compléter
+		duration:"00:01:36",// à compléter
 		format:"MP4"
 	},
 	{
 		name:"ed_hd",// à compléter
 		url:"video/ed_hd_512kb.mp4",
-		duration:"",// à compléter
+		duration:"00:10:53",// à compléter
 		format:"MP4"
 	},
 ]
 
-
-
+let e = 0;
+let nom_video = document.getElementById("nom_video");
+let duree_video = document.getElementById("duree_video");
 let current_time_display = document.getElementById("current_time");
 let myvideo = document.getElementById("myvideo");
 let btplay = document.getElementById("btplay")
@@ -29,6 +30,7 @@ let subtrack = document.getElementById("subtrack")
 let btpause =  document.getElementById("btpause")
 let btprec =  document.getElementById("btprec")
 let btsuiv =  document.getElementById("btsuiv")
+
 
 let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
@@ -44,6 +46,26 @@ window.onTimeUpdate = (e) => {
 	current_time_display.innerHTML = current_time.toLocaleTimeString("fr-FR")/* + " " +current_time.getMilliseconds()*/
     
 };
+
+
+btvid1.onclick = (e) => {
+	change_video(0);
+}
+btvid2.onclick = (e) => {
+	change_video(1);
+}
+btvid3.onclick = (e) => {
+	change_video(2);
+}
+
+function change_video(n){
+	nom_video.innerHTML = videos[n].name;
+	duree_video.innerHTML = videos[n].duration;
+	myvideo.src = videos[n].url;
+	myvideo.load();
+	myvideo.play();
+}
+
 
 btplay.onclick = (e) => {
 	myvideo.play()
@@ -66,11 +88,11 @@ btstop.onclick = (e) => {
 }
 
 btprec.onclick = (e) => {
-
+	
 }
 
 btsuiv.onclick = (e) => {
-
+	
 }
 
 btsave.onclick = (e) => {
