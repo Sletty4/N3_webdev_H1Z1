@@ -4,23 +4,28 @@ body{
  
 input{
 	background-color:#121212;
-	color:white;
+	color:#FFFFFFDE;
 }
 
 h1{
-	
+	font-family : Roboto Mono;
+	color : #FFFFFFDE;	
 }
 h2{
-	
+	font-family : Roboto;
+	color : #FFFFFFDE;
 }
 h3{
-	
+	font-family : Roboto;
+	color : #FFFFFFDE;
 }
 h4{
-	
+	font-family : Roboto;
+	color : #828282DE;
 }
 h5{
-	
+	font-family : Roboto;
+	color : #FFFFFFDE;
 }
 
 .menu{
