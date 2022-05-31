@@ -57,6 +57,7 @@ h5{
 	color : #FFFFFFDE;
 }
 
+<<<<<<< Updated upstream
 
 #vid_st{
     display: flex;
@@ -73,6 +74,12 @@ h5{
 }
 #ecrit{
 }
+=======
+figure{
+	margin: auto;
+}
+
+>>>>>>> Stashed changes
 #current_time{
 }
 #timlin{
