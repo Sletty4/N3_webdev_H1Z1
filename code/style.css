@@ -51,15 +51,17 @@ h5{
 
 
 #vid_st{
-	
+    display: flex;
 }
 #bout{
 }
 #optvid{
 	display: inline-block;
+	margin: 3px;
 }
 #stitr{
 	display: inline-block;
+	margin: 3px;
 }
 #ecrit{
 }
@@ -125,11 +127,6 @@ border-radius: 16px;
 opacity: 1;
 }
 
-#videoetsoustitre {
-	
-text-align:center;
-
-}
 
 #Video_button {
 width: 450px;
@@ -198,12 +195,12 @@ margin: auto;
 
 
 #Sous-titres {
-margin: auto;
 width: 469px;
 height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
-text-align:center;
 opacity: 1;
+text-align:center;
+margin: auto;
 }
 
 #btcharger {
