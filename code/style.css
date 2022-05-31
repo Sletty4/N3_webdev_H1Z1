@@ -15,8 +15,16 @@ div{
 }
 #gr_info{
 	position: relative;
-	top: 170px;
+	top: 100px;
 }
+
+#preview_video h2{
+	float: left;
+	margin: auto;
+	display: flex;
+	
+}
+
 #video_player{
 	margin: 10px;
 }
