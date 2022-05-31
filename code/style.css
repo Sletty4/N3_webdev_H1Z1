@@ -35,4 +35,10 @@ input{
   opacity: 1;
 }
 
+.playbar {
+  padding-top: 50px;
+  padding-left: 80px;
+  top: 15 px;
+}
+
 

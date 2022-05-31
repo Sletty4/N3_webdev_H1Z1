@@ -22,4 +22,22 @@ input{
 
 
 
+.square {
+
+  background-color: #555;
+  
+  top: 1141px;
+  left: 82px;
+  width: 927px;
+  height: 167px;
+  /* UI Properties */
+  background: #121212 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.playbar {
+  padding-top: 50px;
+  padding-left: 80px;
+}
+
 
