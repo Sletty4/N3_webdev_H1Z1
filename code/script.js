@@ -19,7 +19,7 @@ let videos = [
 	},
 ]
 
-let e = 0;
+let video_num;
 let nom_video = document.getElementById("nom_video");
 let duree_video = document.getElementById("duree_video");
 let current_time_display = document.getElementById("current_time");
@@ -49,19 +49,22 @@ window.onTimeUpdate = (e) => {
 
 
 btvid1.onclick = (e) => {
-	change_video(0);
+	video_num = 0;
+	change_video();
 }
 btvid2.onclick = (e) => {
-	change_video(1);
+	video_num = 1;
+	change_video();
 }
 btvid3.onclick = (e) => {
-	change_video(2);
+	video_num = 2;
+	change_video();
 }
 
-function change_video(n){
-	nom_video.innerHTML = videos[n].name;
-	duree_video.innerHTML = videos[n].duration;
-	myvideo.src = videos[n].url;
+function change_video(){
+	nom_video.innerHTML = videos[video_num].name;
+	duree_video.innerHTML = videos[video_num].duration;
+	myvideo.src = videos[video_num].url;
 	myvideo.load();
 	myvideo.play();
 }
@@ -88,11 +91,15 @@ btstop.onclick = (e) => {
 }
 
 btprec.onclick = (e) => {
-	
+	video_num = video_num - 1;
+	if (video_num == -1) video_num = 2
+	change_video();
 }
 
 btsuiv.onclick = (e) => {
-	
+	video_num = video_num + 1;
+	if (video_num == 3) video_num = 0
+	change_video();
 }
 
 btsave.onclick = (e) => {
