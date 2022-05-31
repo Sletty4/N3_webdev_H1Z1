@@ -19,8 +19,9 @@ let videos = [
 	},
 ]
 
-
-
+let e = 0;
+let nom_video = document.getElementById("nom_video");
+let duree_video = document.getElementById("duree_video");
 let current_time_display = document.getElementById("current_time");
 let myvideo = document.getElementById("myvideo");
 let btplay = document.getElementById("btplay")
@@ -29,6 +30,7 @@ let subtrack = document.getElementById("subtrack")
 let btpause =  document.getElementById("btpause")
 let btprec =  document.getElementById("btprec")
 let btsuiv =  document.getElementById("btsuiv")
+
 
 let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
@@ -47,25 +49,22 @@ window.onTimeUpdate = (e) => {
 
 
 btvid1.onclick = (e) => {
-	video = document.querySelector("#video_player video");
-	video.src = videos[0].url
-	video.load();
-	myvideo.play()
+	change_video(0);
 }
 btvid2.onclick = (e) => {
-	video = document.querySelector("#video_player video");
-	video.src = videos[1].url
-	video.load();
-	myvideo.play()
+	change_video(1);
 }
 btvid3.onclick = (e) => {
-	video = document.querySelector("#video_player video");
-	video.src = videos[2].url
-	video.load();
-	myvideo.play()
+	change_video(2);
 }
 
-
+function change_video(n){
+	nom_video.innerHTML = videos[n].name;
+	duree_video.innerHTML = videos[n].duration;
+	myvideo.src = videos[n].url;
+	myvideo.load();
+	myvideo.play();
+}
 
 
 btplay.onclick = (e) => {
