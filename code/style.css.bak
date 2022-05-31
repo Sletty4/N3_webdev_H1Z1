@@ -97,7 +97,11 @@ border-radius: 16px;
 opacity: 1;
 }
 
+#videoetsoustitre {
+	
+text-align:center;
 
+}
 
 #Video_button {
 width: 450px;
@@ -176,11 +180,33 @@ opacity: 1;
 #btcharger {
 	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
 	opacity: 1;
-	width: 48px;
-	height: 48px;
+	width: 123px;
+	height: 36px;
 	margin: 34px 0;
 	background-position: center;
 }
+
+
+#btappliquer {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+
+#btsauvegarder {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	background-position: center;
+}
+
 
 
 

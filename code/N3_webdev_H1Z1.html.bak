@@ -54,7 +54,10 @@
 </div>
 
 
-<div>
+<div id="videoetsoustitre">
+
+<div >
+
 <h2>Video</h2>
 <div id="Video_button">
 <input type="button" name="btplay" id="btplay">
@@ -72,14 +75,15 @@
 <div>
 <h2>Sous-titres</h2>
 <div id="Sous-titres">
-<input type="button" name="btplay" id="btplay">
-<input type="button" name="btrewind" id="btrewind">
-<input type="button" name="btforward" id="btforward">
+<input type="button" name="charger" id="btcharger">
+<input type="button" name="appliquer" id="btappliquer">
+<input type="button" name="sauvgarder" id="btsauvegarder">
 
 
 </div>
 </div>
 
+</div>
 
 
 <div>
