@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 var video_player = document.getElementById("video_player"),
 links = video_player.getElementsByTagName('a');
 for (var i=0; i<links.length; i++) {
