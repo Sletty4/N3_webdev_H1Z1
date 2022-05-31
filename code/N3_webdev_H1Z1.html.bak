@@ -14,15 +14,16 @@
 
 <h3>projet webdev ISEN</h3>
 <h1>Groupe H1Z1</h1>
-
+<div class="bar">
+</div>
 <figure id="video_player">
 
 <h2>Videos :</h2>
 
 <figcaption>
-<a href="video/BigBuckBunny_512kb.mp4"><img src="nambia1.jpg" alt="BigBuckBunny_512kb"></a>
-<a href="video/ed_hd_512kb.mp4"><img src="nambia2.jpg" alt="ed_hd_512kb"></a>
-<a href="video/Python_512kb.mp4"><img src="nambia2.jpg" alt="Python_512kb"></a>
+<input type="image" src="image/BigBuckBunny_512kb.jpg" id="btvid1" width="160" height="120">
+<input type="image" src="image/Python_512kb.jpg" id="btvid2" width="160" height="120">
+<input type="image" src="image/ed_hd_512kb.jpg" id="btvid3" width="160" height="120">
 </figcaption>
 
 <video width="640" height="480" id="myvideo" controls ontimeupdate="onTimeUpdate(event)" >
@@ -37,7 +38,7 @@
 <div>
 <h2>Informations</h2>
 
-<div>
+<div id="Informations">
 <h4>Fichier</h4>
 <h4>Durée</h4>
 <h4>Actuel</h4>
@@ -49,11 +50,51 @@
 </div>
 
 
+<div>
+<h2>Video</h2>
+<div id="Video_button">
+<input type="button" name="btplay" id="btplay">
+<input type="button" name="btrewind" id="btrewind">
+<input type="button" name="btforward" id="btforward">
+<input type="button" name="btprec" id="btprec">
+<input type="button" name="btsuiv" id="btsuiv">
+<input type="button" name="btstop" id="btstop">
+<input type="button" name="btpause" id="btpause">
+</div>
+</div>
 
-<input type="button" value="<< 500ms" name="btrewind" id="btrewind">
-<input type="button" value="stop" name="btstop" id="btstop">
-<input type="button" value="play" name="btplay" id="btplay">
-<input type="button" value=">> 500ms " name="btforward" id="btforward">
+
+
+<div>
+<h2>Sous-titres</h2>
+<div id="Sous-titres">
+
+</div>
+</div>
+
+
+
+<div>
+<h2>Ecriture</h2>
+<div id="Ecriture">
+
+</div>
+</div>
+
+
+
+<div>
+<h2>Timeline</h2>
+<div id="Timeline">
+
+</div>
+</div>
+
+
+
+
+
+
 
 <div>
 <label for="subtitles"></label>
@@ -80,7 +121,7 @@ Ne jamais boire de l'azote liquide.
 
 <div id="playbar">
 
-<canvas width="886 px"  height="15" style=" border:1px solid #000000;background: #2F2638 0% 0% no-repeat padding-box;
+<canvas width="886 px"  height="15 px" style=" border:1px solid #000000;background: #2F2638 0% 0% no-repeat padding-box;
  border: 1px solid #333232;
   opacity: 1;">
 

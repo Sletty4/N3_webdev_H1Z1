@@ -1,10 +1,37 @@
 body{
 	background-color:#292929;
+
 }
  
 input{
 	background-color:#121212;
-	color:white;
+	color:#FFFFFFDE;
+}
+
+h1{
+	font-family : Roboto Mono;
+	color : #FFFFFFDE;	
+}
+h2{
+	font-family : Roboto;
+	color : #FFFFFFDE;
+}
+h3{
+	font-family : Roboto;
+	color : #FFFFFFDE;
+}
+h4{
+	font-family : Roboto;
+	color : #828282DE;
+}
+h5{
+	font-family : Roboto;
+	color : #FFFFFFDE;
+}
+
+#current_time{
+	font-family : Roboto;
+	color : #FFFFFFDE;
 }
 
 .menu{
@@ -34,10 +61,118 @@ input{
   background: #121212 0% 0% no-repeat padding-box;
   opacity: 1;
 }
+.bar {
+
+top: 37px;
+left: 66px;
+width: 904px;
+height: 103px;
+}
 
 .playbar {
   padding-top: 50px;
   padding-left: 80px;
+  top: 15 px;
 }
 
 
+
+#Informations {
+width: 210px;
+height: 274px;
+/* UI Properties */
+border: 1px solid var(--unnamed-color-707070);
+background: #121212 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 16px;
+opacity: 1;
+}
+
+
+
+#Video_button {
+width: 450px;
+height: 116px;
+background: #121212 0% 0% no-repeat padding-box;
+opacity: 1;
+text-align:center;
+margin: auto;
+}
+#btplay {
+	background: transparent url('image/Groupe 516.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+#btrewind {
+	background: transparent url('image/replay_10_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+#btforward {
+	background: transparent url('image/forward_10_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+#btprec {
+	background: transparent url('image/skip_previous_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+#btsuiv {
+	background: transparent url('image/skip_next_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+#btstop {
+	background: transparent url('image/Rectangle 740.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+#btpause {
+	background: transparent url('image/Groupe 523.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+#Sous-titres {
+width: 469px;
+height: 116px;
+background: #121212 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+#Ecriture {
+width: 927px;
+height: 245px;
+background: #121212 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+#Timeline {
+width: 927px;
+height: 167px;
+background: #121212 0% 0% no-repeat padding-box;
+opacity: 1;
+}
