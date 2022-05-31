@@ -49,46 +49,24 @@ h5{
 }
 
 
+
 #bout{
-	position : absolute;
-	top : 220%;
-	left : 5%;
-
 }
-
 #optvid{
-	position : absolute;
-	top : 90%;
-	left : 5%;
-width : 35%;
+	display: inline-block;
 }
 #stitr{
-	position : absolute;
-	top : 90%;
-	right : 5%;
-
+	display: inline-block;
 }
 #ecrit{
-	position : absolute;
-	top : 110%;
-	left : 5%;
-
 }
 #current_time{
-	font-family : Roboto;
-	color : #FFFFFFDE;
 }
 #timlin{
-	position : absolute;
-	top : 150%;
-	left : 5%;
-
 }
 #subtit{
-	position : absolute;
-top : 180%;
-left : 5%;
 }
+
 .menu{
 	color:black;
 	font-size:16px;
