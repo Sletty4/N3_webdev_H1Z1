@@ -7,10 +7,8 @@ input{
 	background-color:#121212;
 	color:#FFFFFFDE;
 }
-
-div{
+div<'
 	color : #FFFFFFDE;
-
 }
 
 h1{
@@ -106,8 +104,8 @@ width: 450px;
 height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
 opacity: 1;
-text-align:0 px;
-margin: auto;
+text-align:center;
+
 }
 #btplay {
 	background: transparent url('image/Groupe 516.svg') 0% 0% no-repeat padding-box;
@@ -173,6 +171,20 @@ height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
 opacity: 1;
 }
+
+
+#btcharger {
+	background: transparent url('image/Groupe 516.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+
+
 
 #Ecriture {
 width: 927px;
