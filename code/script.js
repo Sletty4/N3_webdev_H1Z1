@@ -26,6 +26,9 @@ let myvideo = document.getElementById("myvideo");
 let btplay = document.getElementById("btplay")
 let btstop = document.getElementById("btstop")
 let subtrack = document.getElementById("subtrack")
+let btpause =  document.getElementById("btpause")
+let btprec =  document.getElementById("btprec")
+let btsuiv =  document.getElementById("btsuiv")
 
 let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
@@ -46,16 +49,28 @@ btplay.onclick = (e) => {
 	myvideo.play()
 }
 
-btstop.onclick = (e) => {
+btpause.onclick = (e) => {
 	myvideo.pause()	
 }
 
 btforward.onclick = (e) => {
-	myvideo.currentTime = (myvideo.currentTime*1000 + 500)/1000;
+	myvideo.currentTime = (myvideo.currentTime*1000 + 10000)/1000;
 }
 
 btrewind.onclick = (e) => {
-	myvideo.currentTime = (myvideo.currentTime*1000 - 500)/1000;
+	myvideo.currentTime = (myvideo.currentTime*1000 - 10000)/1000;
+}
+
+btstop.onclick = (e) => {
+	myvideo.load()
+}
+
+btprec.onclick = (e) => {
+
+}
+
+btsuiv.onclick = (e) => {
+
 }
 
 btsave.onclick = (e) => {
