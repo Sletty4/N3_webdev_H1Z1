@@ -17,6 +17,7 @@ div{
 #gr_info{
 	position: relative;
 	top: 170px;
+	margin: 0;
 }
 #video_player{
 	margin: 10px;
@@ -49,7 +50,9 @@ h5{
 }
 
 
-
+#vid_st{
+	
+}
 #bout{
 }
 #optvid{
@@ -195,17 +198,13 @@ margin: auto;
 
 
 #Sous-titres {
-	
-	
-margin: 34px 0;
-
+margin: auto;
 width: 469px;
 height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
+text-align:center;
 opacity: 1;
 }
-
-<<<<<<< HEAD
 
 #btcharger {
 	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
@@ -240,10 +239,6 @@ opacity: 1;
 
 
 
-
-
-=======
->>>>>>> 490d1d62b66172cf7f1dd13e64f5137644a398e3
 #Ecriture {
 width: 927px;
 height: 245px;
