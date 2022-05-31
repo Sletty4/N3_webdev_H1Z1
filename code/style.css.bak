@@ -7,25 +7,31 @@ input{
 	background-color:#121212;
 	color:#FFFFFFDE;
 }
+div{
+	color : #FFFFFFDE;
+}
 
 h1{
-	font-family : Roboto Mono;
-	color : #FFFFFFDE;	
+	font-family : Roboto Mono,Regular;
+	font-weight: normal;
+	color : #FFFFFFDE;
 }
 h2{
-	font-family : Roboto;
+	font-family : Roboto, Medium;
+	font-weight: normal;
 	color : #FFFFFFDE;
 }
 h3{
-	font-family : Roboto;
+	font-family : Roboto, Medium;
 	color : #FFFFFFDE;
 }
 h4{
-	font-family : Roboto;
+	font-family : Roboto,Regular;
 	color : #828282DE;
+	margin : 3px;
 }
 h5{
-	font-family : Roboto;
+	font-family : Roboto, Medium;
 	color : #FFFFFFDE;
 }
 
@@ -67,6 +73,9 @@ top: 37px;
 left: 66px;
 width: 904px;
 height: 103px;
+border-bottom-style: solid;
+border-color: gray;
+
 }
 
 .playbar {
@@ -96,7 +105,7 @@ height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
 opacity: 1;
 text-align:center;
-margin: auto;
+
 }
 #btplay {
 	background: transparent url('image/Groupe 516.svg') 0% 0% no-repeat padding-box;
@@ -162,6 +171,20 @@ height: 116px;
 background: #121212 0% 0% no-repeat padding-box;
 opacity: 1;
 }
+
+
+#btcharger {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+
+
 
 #Ecriture {
 width: 927px;
