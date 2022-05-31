@@ -2,19 +2,19 @@ let videos = [
 	{
 		name:"BigBuckBunny", // à compléter
 		url:"video/BigBuckBunny_512kb.mp4",
-		duration:"", // à compléter
+		duration:"00:09:56", // à compléter
 		format:"MP4"
 	},
 	{
 		name:"Python",// à compléter
 		url:"video/Python_512kb.mp4",
-		duration:"",// à compléter
+		duration:"00:01:36",// à compléter
 		format:"MP4"
 	},
 	{
 		name:"ed_hd",// à compléter
 		url:"video/ed_hd_512kb.mp4",
-		duration:"",// à compléter
+		duration:"00:10:53",// à compléter
 		format:"MP4"
 	},
 ]
@@ -45,6 +45,29 @@ window.onTimeUpdate = (e) => {
     
 };
 
+
+btvid1.onclick = (e) => {
+	video = document.querySelector("#video_player video");
+	video.src = videos[0].url
+	video.load();
+	myvideo.play()
+}
+btvid2.onclick = (e) => {
+	video = document.querySelector("#video_player video");
+	video.src = videos[1].url
+	video.load();
+	myvideo.play()
+}
+btvid3.onclick = (e) => {
+	video = document.querySelector("#video_player video");
+	video.src = videos[2].url
+	video.load();
+	myvideo.play()
+}
+
+
+
+
 btplay.onclick = (e) => {
 	myvideo.play()
 }
@@ -66,11 +89,11 @@ btstop.onclick = (e) => {
 }
 
 btprec.onclick = (e) => {
-
+	
 }
 
 btsuiv.onclick = (e) => {
-
+	
 }
 
 btsave.onclick = (e) => {
