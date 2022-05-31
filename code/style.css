@@ -7,8 +7,18 @@ input{
 	background-color:#121212;
 	color:#FFFFFFDE;
 }
-div<'
+div{
 	color : #FFFFFFDE;
+}
+#video_info{
+    display: flex;
+}
+#gr_info{
+	position: relative;
+	top: 170px;
+}
+#video_player{
+	margin: 10px;
 }
 
 h1{
