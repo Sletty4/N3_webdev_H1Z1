@@ -183,6 +183,28 @@ opacity: 1;
 }
 
 
+#btappliquer {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+
+#btsauvegarder {
+	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	background-position: center;
+}
+
+
+
 
 
 
