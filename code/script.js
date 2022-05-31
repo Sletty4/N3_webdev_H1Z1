@@ -1,20 +1,20 @@
 let videos = [
 	{
-		name:"", // à compléter
+		name:"BigBuckBunny", // à compléter
 		url:"video/BigBuckBunny_512kb.mp4",
-		duration:"", // à compléter
+		duration:"00:09:56", // à compléter
 		format:"MP4"
 	},
 	{
-		name:"",// à compléter
+		name:"Python",// à compléter
 		url:"video/Python_512kb.mp4",
-		duration:"",// à compléter
+		duration:"00:01:36",// à compléter
 		format:"MP4"
 	},
 	{
-		name:"",// à compléter
+		name:"ed_hd",// à compléter
 		url:"video/ed_hd_512kb.mp4",
-		duration:"",// à compléter
+		duration:"00:10:53",// à compléter
 		format:"MP4"
 	},
 ]
@@ -26,6 +26,9 @@ let myvideo = document.getElementById("myvideo");
 let btplay = document.getElementById("btplay")
 let btstop = document.getElementById("btstop")
 let subtrack = document.getElementById("subtrack")
+let btpause =  document.getElementById("btpause")
+let btprec =  document.getElementById("btprec")
+let btsuiv =  document.getElementById("btsuiv")
 
 let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
@@ -42,20 +45,55 @@ window.onTimeUpdate = (e) => {
     
 };
 
+
+btvid1.onclick = (e) => {
+	video = document.querySelector("#video_player video");
+	video.src = videos[0].url
+	video.load();
+	myvideo.play()
+}
+btvid2.onclick = (e) => {
+	video = document.querySelector("#video_player video");
+	video.src = videos[1].url
+	video.load();
+	myvideo.play()
+}
+btvid3.onclick = (e) => {
+	video = document.querySelector("#video_player video");
+	video.src = videos[2].url
+	video.load();
+	myvideo.play()
+}
+
+
+
+
 btplay.onclick = (e) => {
 	myvideo.play()
 }
 
-btstop.onclick = (e) => {
+btpause.onclick = (e) => {
 	myvideo.pause()	
 }
 
 btforward.onclick = (e) => {
-	myvideo.currentTime = (myvideo.currentTime*1000 + 500)/1000;
+	myvideo.currentTime = (myvideo.currentTime*1000 + 10000)/1000;
 }
 
 btrewind.onclick = (e) => {
-	myvideo.currentTime = (myvideo.currentTime*1000 - 500)/1000;
+	myvideo.currentTime = (myvideo.currentTime*1000 - 10000)/1000;
+}
+
+btstop.onclick = (e) => {
+	myvideo.load()
+}
+
+btprec.onclick = (e) => {
+	
+}
+
+btsuiv.onclick = (e) => {
+	
 }
 
 btsave.onclick = (e) => {
