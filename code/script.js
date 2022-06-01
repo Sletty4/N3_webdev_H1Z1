@@ -3,19 +3,22 @@ let videos = [
 		name:"BigBuckBunny", // à compléter
 		url:"video/BigBuckBunny_512kb.mp4",
 		duration:"00:09:56", // à compléter
-		format:"MP4"
+		format:"MP4",
+		subtitle:""
 	},
 	{
 		name:"Python",// à compléter
 		url:"video/Python_512kb.mp4",
 		duration:"00:01:36",// à compléter
-		format:"MP4"
+		format:"MP4",
+		subtitle:"video/ed_hd_512kb.fr.vtt"
 	},
 	{
 		name:"ed_hd",// à compléter
 		url:"video/ed_hd_512kb.mp4",
 		duration:"00:10:53",// à compléter
-		format:"MP4"
+		format:"MP4",
+		subtitle:""
 	},
 ]
 
@@ -36,6 +39,7 @@ let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
 
 let btsave = document.getElementById("btsave")
+let btload =  document.getElementById("btcharger")
 
 let subtitles = document.getElementById("subtitles")
 
@@ -87,7 +91,7 @@ btrewind.onclick = (e) => {
 }
 
 btstop.onclick = (e) => {
-	myvideo.load()
+	myvideo.load(video_num)
 }
 
 btprec.onclick = (e) => {
@@ -102,8 +106,12 @@ btsuiv.onclick = (e) => {
 	change_video();
 }
 
+btload.onclick = (e) => {
+	loadsubtitles();
+}
+
 btsave.onclick = (e) => {
-	makeLink (subtitles.value)
+	makeLink (subtitles.value);
 }
 
 //get current video time and put it in clipabord
@@ -131,7 +139,8 @@ function makeLink(trad_text){
 
 }
 
-
-
+function loadsubtitles(){
+	subtitles.innerHTML = fetch(videos[video_num].subtitle);
+}
 
 
