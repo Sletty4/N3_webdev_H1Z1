@@ -219,33 +219,52 @@ margin: auto;
 }
 
 #btcharger {
-	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	background: #BB86FC 0% 0% no-repeat padding-box;
+	border-radius: 4px;
 	opacity: 1;
 	width: 123px;
 	height: 36px;
 	margin: 34px 0;
-	background-position: center;
+	font-family: Roboto;
+	color: #000000;
+	font-size: 14px;
+	background-image: url('image/icon-content-add_24px.svg');
+	background-position: 5% 50%;
+	text-indent: 15px;
+	line-height: 18px;
 }
 
 
 #btappliquer {
-	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	background: #BB86FC 0% 0% no-repeat padding-box;
+	border-radius: 4px;
 	opacity: 1;
-	width: 123px;
+	width: 133px;
 	height: 36px;
 	margin: 34px 0;
-	background-position: center;
+	font-family: Roboto;
+	color: #000000;
+	font-size: 14px;
+	background-image: url('image/add_24px.svg');
+	background-position: 5% 50%;
+	text-indent: 15px;
+	line-height: 18px;
 }
 
 
-
 #btsauvegarder {
-	background: transparent url('image/btcharger.svg') 0% 0% no-repeat padding-box;
+	background: #BB86FC 0% 0% no-repeat padding-box;
+	border-radius: 4px;
 	opacity: 1;
-	width: 123px;
+	width: 161px;
 	height: 36px;
 	margin: 34px 0;
-	background-position: center;
+	font-family: Roboto;
+	color: #000000;
+	background-image: url("image/save_black_24dp.svg");
+	background-position: 5% 50%;
+	text-indent: 15px;
+	line-height: 18px;
 }
 
 
