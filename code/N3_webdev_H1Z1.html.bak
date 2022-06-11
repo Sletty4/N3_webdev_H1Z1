@@ -145,9 +145,19 @@
 		</div>
 		
 		<div id="TextUnderTimelinebar">
-		<p>
-		00:00:00
-		</p>
+					
+			<table cellspacing="100 px"">
+			  <tr>
+				<th>00:00:00</th>
+				<th>00:00:00</th>
+				<th>00:00:00</th>
+			  </tr>
+			  
+			</table>
+
+		</div>
+		
+		<div id="Timelinelastbar">
 
 		</div>
 		

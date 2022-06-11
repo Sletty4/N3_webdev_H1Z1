@@ -374,4 +374,19 @@ margin-right: auto;
 }
 
 
-
+#Timelinelastbar{
+	
+	/* Layout Properties */
+top: 1262px;
+left: 337px;
+width: 500px;
+height: 29px;
+/* UI Properties */
+background: #2F2638 0% 0% no-repeat padding-box;
+border: 1px solid #333232;
+border-radius: 11px;
+opacity: 1;
+text-align:center;
+margin-left: auto;
+margin-right: auto;
+}
