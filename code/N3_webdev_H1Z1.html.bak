@@ -136,10 +136,24 @@
 <h2>Timeline</h2>
 <div id="Timeline">
 
-<input type="button" name="marqueur de position " id="marqueur_deposition">
+		<div>
+		<input type="button" name="marqueur de position " id="marqueur_deposition">
+		</div>
+
 		<div id="Timelinebar">
 
 		</div>
+		
+		<div id="TextUnderTimelinebar">
+		<p>
+		00:00:00
+		</p>
+
+		</div>
+		
+		</div>
+
+		
 </div>
 </div>
 
