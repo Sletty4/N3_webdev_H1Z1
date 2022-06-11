@@ -141,12 +141,15 @@
 		</div>
 
 		<div id="Timelinebar">
-
+                
+				/*<div id=" Timelinesquare">
+						
+				</div>*/
 		</div>
 		
 		<div id="TextUnderTimelinebar">
 					
-			<table cellspacing="100 px"">
+			<table>
 			  <tr>
 				<th>00:00:00</th>
 				<th>00:00:00</th>
