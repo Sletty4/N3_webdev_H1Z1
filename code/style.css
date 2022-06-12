@@ -90,6 +90,8 @@ opacity: 1;
 }
 #table_st{
 	font: Roboto;
+	overflow-y: scroll;
+	height: 150px;
 }
 th{
 	padding: 20px 20px 10px 20px;
