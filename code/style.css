@@ -90,8 +90,13 @@ opacity: 1;
 }
 #table_st{
 	font: Roboto;
-	overflow-y: scroll;
-	height: 150px;
+    display: inline-block;
+}
+#table_stbis{
+    height: 120px;
+    display: inline-block;
+    width: 900px;
+    overflow: auto;
 }
 th{
 	padding: 20px 20px 10px 20px;
@@ -114,12 +119,15 @@ td{
 }
 #table1bis{
 	text-align: left;
+	width: 80px;
 }
 #table2bis{
 	text-align: center;
+	width: 80px;
 }
 #table3bis{
 	text-align: left;
+	width: 927px;
 }
 
 #Temps{
@@ -333,13 +341,14 @@ margin: auto;
 }
 
 #btplus {
-	background: #201c25 url('image/btplus.svg') 0% 0% no-repeat padding-box;
+	background: transparent url('image/btplus.svg') 0% 0% no-repeat padding-box;
 	opacity: 1;
 	width: 60px;
 	height: 60px;
 	margin: 10px 0;
-	
 	background-position: center;
+    position:absolute;
+	right: 10px;
 }
 
 #marqueur_deposition {
