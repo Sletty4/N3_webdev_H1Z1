@@ -43,6 +43,10 @@ let btload =  document.getElementById("btcharger")
 
 let subtitles = document.getElementById("subtitles")
 
+
+let btplus = document.getElementById("btplus")
+let table = document.getElementById("table_stbis")
+
 window.onTimeUpdate = (e) => {
 
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
@@ -112,6 +116,22 @@ btload.onclick = (e) => {
 
 btsave.onclick = (e) => {
 	makeLink (subtitles.value);
+}
+
+btplus.onclick = (e) => {
+	var nouvelleLigne = table.insertRow(table.rows.length);
+	var Temps = document.getElementById('Temps').value;
+	var Durée = document.getElementById('Durée').value;
+	var Texte = document.getElementById('Texte').value;
+    var nouvelleCellule = nouvelleLigne.insertCell(0);
+	var nouveauTexte = document.createTextNode(Temps);
+    nouvelleCellule.appendChild(nouveauTexte);
+    var nouvelleCellule = nouvelleLigne.insertCell(1);
+	var nouveauTexte = document.createTextNode(Durée);
+    nouvelleCellule.appendChild(nouveauTexte);
+    var nouvelleCellule = nouvelleLigne.insertCell(2);
+	var nouveauTexte = document.createTextNode(Texte);
+    nouvelleCellule.appendChild(nouveauTexte);
 }
 
 //get current video time and put it in clipabord
