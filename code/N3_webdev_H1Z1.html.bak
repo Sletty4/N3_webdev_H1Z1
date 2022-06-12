@@ -82,7 +82,7 @@
 <div id="stitr">
 <h2>Sous-titres</h2>
 <div id="Sous-titres">
-<input type="file" id="fileLoader" name="files" title="Load File" >
+<input type="file" id="fileLoader" name="files" style="display: none;" title="Load File" >
 <input type="button" value="CHARGER" name="charger" id="btcharger">
 <input type="button" value="APPLIQUER" name="appliquer" id="btappliquer">
 <input type="button" value="SAUVEGARDER" name="sauvgarder" id="btsauvegarder">
@@ -104,7 +104,7 @@
             <th id="table3">Texte</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="table_stbis">
         <tr>
             <td id="table1bis">00:00:05</td>
             <td id="table2bis">5s</td>
@@ -115,6 +115,11 @@
             <td id="table2bis">2s</td>
             <td id="table3bis">Il est 21h15 à ma montre</td>
         </tr>
+        <tr>
+            <td id="table1bis">00:00:17</td>
+            <td id="table2bis">2s</td>
+            <td id="table3bis">Merci Monsieur</td>
+        </tr>
     </tbody>
 </table>
 
@@ -122,9 +127,6 @@
 <input type="text" id="Temps" name="Temps">
 <input type="text" id="Durée" name="Durée">
 <input type="text" id="Texte" name="Texte">
-</div>
-
-<div >
 <input type="button" name="btplus" id="btplus">
 </div>
 
@@ -152,7 +154,7 @@
 			  <tr>
 				<th>00:00:00</th>
 				<th>00:00:00</th>
-				<th>00:00:00</th>
+				<th id="duree_video1">00:00:00</th>
 			  </tr>
 			  
 			</table>

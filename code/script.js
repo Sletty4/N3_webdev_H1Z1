@@ -47,6 +47,8 @@ let subtitles = document.getElementById("subtitles")
 let btplus = document.getElementById("btplus")
 let table = document.getElementById("table_stbis")
 
+
+
 window.onTimeUpdate = (e) => {
 
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
@@ -67,6 +69,7 @@ btvid2.onclick = (e) => {
 btvid3.onclick = (e) => {
 	video_num = 2;
 	change_video();
+	
 }
 
 function change_video(){
@@ -75,6 +78,9 @@ function change_video(){
 	myvideo.src = videos[video_num].url;
 	myvideo.load();
 	myvideo.play();
+	
+	//pour avoir le temps pour le timeline
+    TimelineDuration.innerHTML = videos[video_num].duration;
 }
 
 
@@ -168,3 +174,4 @@ function loadsubtitles(){
 function openfileDialog() {
     $("#fileLoader").click();
 }
+
