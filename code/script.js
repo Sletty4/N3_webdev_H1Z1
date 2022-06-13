@@ -180,7 +180,7 @@ function openfileDialog() {
 var canvas,ctx
 let posx = 0
 let speed = 1; // controlée par les boutons
-let rectWidth = 50;
+let rectWidth = 11;
 let mousex, mousey;
 
 function init(){
@@ -206,7 +206,7 @@ function init(){
 	}
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "#FFFFFF";
-	ctx.fillRect(posx,0,rectWidth,75);
+	ctx.fillRect(posx,0,rectWidth,16);
 	/*drawMouseCoordinates();*/
  }
  

@@ -195,13 +195,7 @@ function init(){
 	window.requestAnimationFrame(gameLoop);
 
 }
-/*
-function drawMouseCoordinates(){
-	ctx.font = '12px Arial';
-            ctx.fillStyle = 'black';
-            ctx.fillText("X:"+mousex+"Y:"+mousey,0,10);
-}
-*/
+
  //fonction de dessin appelée en boucle
  function draw() {
 	
@@ -217,8 +211,6 @@ function drawMouseCoordinates(){
  }
  
 
-
-	
 
 function gameLoop(timeStamp) {
 	
