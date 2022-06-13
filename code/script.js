@@ -195,13 +195,7 @@ function init(){
 	window.requestAnimationFrame(gameLoop);
 
 }
-/*
-function drawMouseCoordinates(){
-	ctx.font = '12px Arial';
-            ctx.fillStyle = 'black';
-            ctx.fillText("X:"+mousex+"Y:"+mousey,0,10);
-}
-*/
+
  //fonction de dessin appelée en boucle
  function draw() {
 	
@@ -211,14 +205,12 @@ function drawMouseCoordinates(){
 		posx = canvas.width-rectWidth
 	}
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = "#FF0000";
+	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(posx,0,rectWidth,75);
 	/*drawMouseCoordinates();*/
  }
  
 
-
-	
 
 function gameLoop(timeStamp) {
 	
