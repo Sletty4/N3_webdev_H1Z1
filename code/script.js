@@ -73,6 +73,8 @@ btvid3.onclick = (e) => {
 }
 
 function change_video(){
+	/*caculatespeed();*/
+	
 	nom_video.innerHTML = videos[video_num].name;
 	duree_video.innerHTML = videos[video_num].duration;
 	myvideo.src = videos[video_num].url;
@@ -182,8 +184,18 @@ let posx = 0
 let speed = 1; // controlée par les boutons
 let rectWidth = 11;
 let mousex, mousey;
+/*
+function caculatespeed(){
+	
+
+	speed=(myvideo.duration*1000)/886;
+	
+	
+}*/
 
 function init(){
+	
+	
 	// récupération de l'objet canvas par son id et apres qu'il ait été chargé
 	canvas = document.getElementById("Timelinebar1");
 	ctx = canvas.getContext("2d");
