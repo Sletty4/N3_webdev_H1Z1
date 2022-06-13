@@ -48,8 +48,6 @@ let btplus = document.getElementById("btplus")
 let table = document.getElementById("table_stbis")
 
 
-//time for the timeline
-let duree_video1 = document.getElementById("duree_video1");
 
 window.onTimeUpdate = (e) => {
 
@@ -81,7 +79,7 @@ function change_video(){
 	myvideo.load();
 	myvideo.play();
 	
-	
+	//pour avoir le temps pour le timeline
     TimelineDuration.innerHTML = videos[video_num].duration;
 }
 

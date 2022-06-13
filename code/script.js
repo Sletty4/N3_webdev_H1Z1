@@ -175,3 +175,55 @@ function openfileDialog() {
     $("#fileLoader").click();
 }
 
+
+//gestion du canva
+var canvas,ctx
+let posx = 0
+let speed = 1; // controlée par les boutons
+let rectWidth = 50;
+let mousex, mousey;
+
+function init(){
+	// récupération de l'objet canvas par son id et apres qu'il ait été chargé
+	canvas = document.getElementById("Timelinebar1");
+	ctx = canvas.getContext("2d");
+		canvas.onmousemove=(e) => {
+		mousex = e.offsetX;
+		mousey = e.offsetY;
+		};
+	
+	window.requestAnimationFrame(gameLoop);
+
+}
+/*
+function drawMouseCoordinates(){
+	ctx.font = '12px Arial';
+            ctx.fillStyle = 'black';
+            ctx.fillText("X:"+mousex+"Y:"+mousey,0,10);
+}
+*/
+ //fonction de dessin appelée en boucle
+ function draw() {
+	
+	
+	posx = posx + speed	
+	if(posx >= canvas.width-rectWidth){
+		posx = canvas.width-rectWidth
+	}
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(posx,0,rectWidth,75);
+	/*drawMouseCoordinates();*/
+ }
+ 
+
+
+	
+
+function gameLoop(timeStamp) {
+	
+	draw()
+	
+	window.requestAnimationFrame(gameLoop);
+}
+window.onload = init

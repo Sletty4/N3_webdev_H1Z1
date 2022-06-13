@@ -162,11 +162,11 @@
 		</div>
 		
 		<div id="Timelinelastbar">
-              <table>
+             <table id="lastbarsoustitre">
 			  <tr>
-				<th>Temps</th>
-				<th>Durée</th>
-				<th >Texte</th>
+				<th>00:00:05</th>
+				<th>5s</th>
+				<th >Bonjour monsieur, quelle heure est-il ?</th>
 			  </tr>
 			  
 			</table>
