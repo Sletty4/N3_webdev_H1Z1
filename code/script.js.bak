@@ -79,8 +79,8 @@ let table1=document.getElementById("table_st");
 
 	
      //recuperation des soustritre du tableau
-	  var x = document.getElementById("table_st").rows[1].cells;
-	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[1].cells;
+	  var x = document.getElementById("table_st").rows[2].cells;
+	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
 	  
 function change_video(){
 	/*caculatespeed();*/

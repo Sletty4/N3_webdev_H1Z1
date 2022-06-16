@@ -96,8 +96,8 @@ function change_video(){
 	
 	
 	
-	//test de recuperation
-	alert(x[1].innerHTML);
+	//recuperation du tableau des soustitres 
+	
 	lastbarsoustitre[0].innerHTML=x[0].innerHTML;
 	lastbarsoustitre[1].innerHTML=x[1].innerHTML;
 	lastbarsoustitre[2].innerHTML=x[2].innerHTML;
