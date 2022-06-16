@@ -72,15 +72,15 @@ btvid3.onclick = (e) => {
 	change_video();
 	
 }
-let textb = "nosubtiltle";
-let Timelinelastbar1=document.getElementById("Timelinelastbar1");
+
 let table1=document.getElementById("table_st");
 
-//recuperation des soustritre du tableau
-	textb=table1.rows[1].cells.innerHTML;
+
+
 	
-	
-	  var x = document.getElementById("table_st").rows[0].cells;
+     //recuperation des soustritre du tableau
+	  var x = document.getElementById("table_st").rows[2].cells;
+	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
 	  
 function change_video(){
 	/*caculatespeed();*/
@@ -95,9 +95,14 @@ function change_video(){
     TimelineDuration.innerHTML = videos[video_num].duration;
 	
 	
-	alert(x[0].innerHTML);
 	
-	Timelinelastbar1.innerHTML=x[0].innerHTML;
+	//test de recuperation
+	alert(x[1].innerHTML);
+	lastbarsoustitre[0].innerHTML=x[0].innerHTML;
+	lastbarsoustitre[1].innerHTML=x[1].innerHTML;
+	lastbarsoustitre[2].innerHTML=x[2].innerHTML;
+
+
 	
 	
 }
