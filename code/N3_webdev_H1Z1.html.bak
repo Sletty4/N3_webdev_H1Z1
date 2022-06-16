@@ -166,8 +166,12 @@
 		</div>
 		
 		<div id="Timelinelastbar">
+		<div id="Timelinelastbar1">
+		pas de soustritres
+		</div>
+		
              <table id="lastbarsoustitre">
-			  <tr>
+			  <tr >
 				<th>00:00:05</th>
 				<th>5s</th>
 				<th >Bonjour monsieur, quelle heure est-il ?</th>
