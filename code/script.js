@@ -44,6 +44,7 @@ let btload =  document.getElementById("btcharger")
 let subtitles = document.getElementById("subtitles")
 
 
+
 let btplus = document.getElementById("btplus")
 let table = document.getElementById("table_stbis")
 
@@ -71,7 +72,16 @@ btvid3.onclick = (e) => {
 	change_video();
 	
 }
+let textb = "nosubtiltle";
+let Timelinelastbar1=document.getElementById("Timelinelastbar1");
+let table1=document.getElementById("table_st");
 
+//recuperation des soustritre du tableau
+	textb=table1.rows[1].cells.innerHTML;
+	
+	
+	  var x = document.getElementById("table_st").rows[0].cells;
+	  
 function change_video(){
 	/*caculatespeed();*/
 	
@@ -83,6 +93,13 @@ function change_video(){
 	
 	//pour avoir le temps pour le timeline
     TimelineDuration.innerHTML = videos[video_num].duration;
+	
+	
+	alert(x[0].innerHTML);
+	
+	Timelinelastbar1.innerHTML=x[0].innerHTML;
+	
+	
 }
 
 
@@ -126,6 +143,12 @@ btsave.onclick = (e) => {
 	makeLink (subtitles.value);
 }
 
+/*
+btsauvegarder.onclick=(e)=>{
+	
+	makeLink (table_st.value);
+}
+*/
 btplus.onclick = (e) => {
 	var nouvelleLigne = table.insertRow(table.rows.length);
 	var Temps = document.getElementById('Temps').value;
