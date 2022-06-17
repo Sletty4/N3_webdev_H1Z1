@@ -85,7 +85,7 @@
 <input type="file" id="fileLoader" name="files" style="display: none;" title="Load File" >
 <input type="button" value="CHARGER" name="charger" id="btcharger">
 <input type="button" value="APPLIQUER" name="appliquer" id="btappliquer">
-<input type="button" value="SAUVEGARDER" name="sauvgarder" id="btsauvegarder">
+<input type="button" value="SAUVEGARDER" name="sauvgarder" id="btsave">
 </div>
 </div>
 
@@ -125,7 +125,7 @@
 
 <label for="subtitles"></label>
 
-<textarea id="subtitles" style="display: none;" name="subtitles" rows="20" cols="50">
+<textarea id="subtitles" style="display: none;" name="subtitles">
 pas info
 </textarea>
 
@@ -210,7 +210,7 @@ Ne jamais boire de l'azote liquide.
 </textarea>
 </div>
 <div id="bout">
-<input type="button" value="Save" name="btsave" id="btsave">
+
 <a href="#" id="lnkdownload">download </a>
 </div>
 <div>
