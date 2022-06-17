@@ -123,6 +123,12 @@
     </tbody>
 </table>
 
+<label for="subtitles"></label>
+
+<textarea id="subtitles" style="display: none;" name="subtitles" rows="20" cols="50">
+pas info
+</textarea>
+
 <div>
 <input type="text" id="Temps" name="Temps">
 <input type="text" id="Durée" name="Durée">
@@ -166,9 +172,6 @@
 		</div>
 		
 		<div id="Timelinelastbar">
-		<div id="Timelinelastbar1">
-		pas de soustritres
-		</div>
 		
              <table id="lastbarsoustitre">
 			  <tr >

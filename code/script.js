@@ -79,13 +79,21 @@ btvid3.onclick = (e) => {
 	
      //recuperation des soustritre du tableau
 	  var x = document.getElementById("table_st").rows[2].cells;
+	  var longueur= document.getElementById("table_st").rows[2].length;
 	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
 	  
 	  
-	  function writemytableinFile(){
+	  //recupere les donnees du tableau pour la sauvegarde dans un fichier
+	  function savetabletofile(){
 		  
-		  
+	
+		
+	  subtitles.innerHTML=x[0].innerHTML+"   "+x[1].innerHTML+"   "+x[2].innerHTML;
+	  alert(subtitles.innerHTML);
+		
+		
 	  }
+
 	  
 function change_video(){
 	/*caculatespeed();*/
@@ -99,18 +107,19 @@ function change_video(){
 	//pour avoir le temps pour le timeline
     TimelineDuration.innerHTML = videos[video_num].duration;
 	
+
+	//recuperation du tableau des soustitres pour la timelinelastbar
 	
-	
-	//recuperation du tableau des soustitres 
-	
-		for (let i = 0; i < 100; i++) {
+		for (let i = 0; i <longueur; i++) {
 			
-	lastbarsoustitre[i].innerHTML=x[i].innerHTML;
+			lastbarsoustitre[i].innerHTML=x[i].innerHTML;
 	
 		}
-
-
-
+		
+     
+	    
+	
+ savetabletofile();
 	
 	
 }
