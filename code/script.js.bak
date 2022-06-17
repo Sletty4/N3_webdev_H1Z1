@@ -109,30 +109,15 @@ btvid3.onclick = (e) => {
 	  
 function change_video(){
 	
-	var chars = videos[video_num].duration.split(":");
-     //convertion en seconde
-	 var intime = current_time_display.innerHTML.split(":");
 	
-    
-	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
-   
-    var totalsecondactuel=parseInt(intime[0]*60*60)+parseInt(intime[1]*60)+parseInt(intime[2]);
-	//alert(totalsecondactuel);
-		
-	//avance avec la video
-	speed=886/totalsecond*totalsecondactuel;
-
-	
-	nom_video.innerHTML = videos[video_num].name;
-	duree_video.innerHTML = videos[video_num].duration;
-	myvideo.src = videos[video_num].url;
-	myvideo.load();
-	myvideo.play();
 	
 	//pour avoir le temps pour le timeline
     TimelineDuration.innerHTML = videos[video_num].duration;
 	
-
+	
+	nom_video.innerHTML = videos[video_num].name;
+	duree_video.innerHTML = videos[video_num].duration;
+	myvideo.src = videos[video_num].url;
 	//recuperation du tableau des soustitres pour la timelinelastbar
 	
 		for (let i = 0; i <longueur; i++) {

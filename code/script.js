@@ -105,6 +105,9 @@ btvid3.onclick = (e) => {
 		
 		
 	  }
+	  
+	  
+	
 
 	  
 function change_video(){
@@ -114,7 +117,10 @@ function change_video(){
 	//pour avoir le temps pour le timeline
     TimelineDuration.innerHTML = videos[video_num].duration;
 	
-
+	
+	nom_video.innerHTML = videos[video_num].name;
+	duree_video.innerHTML = videos[video_num].duration;
+	myvideo.src = videos[video_num].url;
 	//recuperation du tableau des soustitres pour la timelinelastbar
 	
 		for (let i = 0; i <longueur; i++) {
