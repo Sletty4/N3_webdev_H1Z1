@@ -73,7 +73,6 @@ btvid3.onclick = (e) => {
 	
 }
 
-let table1=document.getElementById("table_st");
 
 
 
@@ -81,6 +80,12 @@ let table1=document.getElementById("table_st");
      //recuperation des soustritre du tableau
 	  var x = document.getElementById("table_st").rows[2].cells;
 	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
+	  
+	  
+	  function writemytableinFile(){
+		  
+		  
+	  }
 	  
 function change_video(){
 	/*caculatespeed();*/
@@ -98,14 +103,19 @@ function change_video(){
 	
 	//recuperation du tableau des soustitres 
 	
-	lastbarsoustitre[0].innerHTML=x[0].innerHTML;
-	lastbarsoustitre[1].innerHTML=x[1].innerHTML;
-	lastbarsoustitre[2].innerHTML=x[2].innerHTML;
+		for (let i = 0; i < 100; i++) {
+			
+	lastbarsoustitre[i].innerHTML=x[i].innerHTML;
+	
+		}
+
 
 
 	
 	
 }
+
+
 
 
 btplay.onclick = (e) => {
