@@ -98,11 +98,17 @@ function change_video(){
 	
 	var chars = videos[video_num].duration.split(":");
      //convertion en seconde
- 
-	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
+	 var intime = current_time_display.innerHTML.split(":");
 	
-	alert(totalsecond);
-	speed=886/totalsecond;
+    
+	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
+   
+    var totalsecondactuel=parseInt(intime[0]*60*60)+parseInt(intime[1]*60)+parseInt(intime[2]);
+	//alert(totalsecondactuel);
+		
+	//avance avec la video
+	speed=886/totalsecond*totalsecondactuel;
+
 	
 	nom_video.innerHTML = videos[video_num].name;
 	duree_video.innerHTML = videos[video_num].duration;
@@ -233,7 +239,8 @@ function openfileDialog() {
 
 //gestion du canva
 var canvas,ctx
-let posx = 0
+let posx = 0;
+var compt=0;
 let speed = 0; // controlée par les boutons
 let rectWidth = 11;
 let mousex, mousey;
@@ -264,8 +271,8 @@ function init(){
  //fonction de dessin appelée en boucle
  function draw() {
 	
-	
-	posx = posx + speed	
+	compt+=1
+	posx =compt*speed	
 	if(posx >= canvas.width-rectWidth){
 		posx = canvas.width-rectWidth
 	}
