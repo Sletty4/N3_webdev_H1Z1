@@ -56,6 +56,19 @@ window.onTimeUpdate = (e) => {
 	current_time.setHours(current_time.getHours() -1)
 	current_time_display.innerHTML = current_time.toLocaleTimeString("fr-FR")/* + " " +current_time.getMilliseconds()*/
     
+	
+	var chars = videos[video_num].duration.split(":");
+     //convertion en seconde
+	 var intime = current_time_display.innerHTML.split(":");
+	
+    
+	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
+   
+    var totalsecondactuel=parseInt(intime[0]*60*60)+parseInt(intime[1]*60)+parseInt(intime[2]);
+	//alert(totalsecondactuel);
+		
+	//avance avec la video
+	speed=886/totalsecond*totalsecondactuel;
 };
 
 
@@ -96,25 +109,7 @@ btvid3.onclick = (e) => {
 	  
 function change_video(){
 	
-	var chars = videos[video_num].duration.split(":");
-     //convertion en seconde
-	 var intime = current_time_display.innerHTML.split(":");
 	
-    
-	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
-   
-    var totalsecondactuel=parseInt(intime[0]*60*60)+parseInt(intime[1]*60)+parseInt(intime[2]);
-	//alert(totalsecondactuel);
-		
-	//avance avec la video
-	speed=886/totalsecond*totalsecondactuel;
-
-	
-	nom_video.innerHTML = videos[video_num].name;
-	duree_video.innerHTML = videos[video_num].duration;
-	myvideo.src = videos[video_num].url;
-	myvideo.load();
-	myvideo.play();
 	
 	//pour avoir le temps pour le timeline
     TimelineDuration.innerHTML = videos[video_num].duration;
@@ -239,8 +234,7 @@ function openfileDialog() {
 
 //gestion du canva
 var canvas,ctx
-let posx = 0;
-var compt=0;
+let posx = 0
 let speed = 0; // controlée par les boutons
 let rectWidth = 11;
 let mousex, mousey;
@@ -271,8 +265,8 @@ function init(){
  //fonction de dessin appelée en boucle
  function draw() {
 	
-	compt+=1
-	posx =compt*speed	
+	
+	posx = speed	
 	if(posx >= canvas.width-rectWidth){
 		posx = canvas.width-rectWidth
 	}

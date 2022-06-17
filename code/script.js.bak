@@ -56,6 +56,19 @@ window.onTimeUpdate = (e) => {
 	current_time.setHours(current_time.getHours() -1)
 	current_time_display.innerHTML = current_time.toLocaleTimeString("fr-FR")/* + " " +current_time.getMilliseconds()*/
     
+	
+	var chars = videos[video_num].duration.split(":");
+     //convertion en seconde
+	 var intime = current_time_display.innerHTML.split(":");
+	
+    
+	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
+   
+    var totalsecondactuel=parseInt(intime[0]*60*60)+parseInt(intime[1]*60)+parseInt(intime[2]);
+	//alert(totalsecondactuel);
+		
+	//avance avec la video
+	speed=886/totalsecond*totalsecondactuel;
 };
 
 
@@ -107,7 +120,7 @@ function change_video(){
 	//alert(totalsecondactuel);
 		
 	//avance avec la video
-	speed=886/totalsecond*totalsecondactuel-posx;
+	speed=886/totalsecond*totalsecondactuel;
 
 	
 	nom_video.innerHTML = videos[video_num].name;
@@ -271,7 +284,7 @@ function init(){
  function draw() {
 	
 	
-	posx += speed	
+	posx = speed	
 	if(posx >= canvas.width-rectWidth){
 		posx = canvas.width-rectWidth
 	}
