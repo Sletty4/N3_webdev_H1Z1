@@ -50,6 +50,13 @@ let table = document.getElementById("table_stbis")
 
 
 
+//***************
+     //recuperation des soustritre du tableau
+	  var x = document.getElementById("table_st").rows[2].cells;
+	  var longueur= document.getElementById("table_st").rows[2].length;
+	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
+	  //*********************
+
 window.onTimeUpdate = (e) => {
 
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
@@ -69,6 +76,45 @@ window.onTimeUpdate = (e) => {
 		
 	//avance avec la video
 	speed=886/totalsecond*totalsecondactuel;
+	
+	
+	
+	//********************************************************************
+	 for (let i = 0; i < 2; i++) {
+		  
+		  var y = document.getElementById("table_st").rows[i].cells;
+		  
+		 
+     //convertion en seconde
+	 var currentimesecondestr = current_time_display.innerHTML.split(":");
+	 //on prend la premiere partie du tableau pour avec la position du soustitre dans le temps
+	 var subtitlesecondestr = y[0].innerHTML.split(":");
+
+   
+    var totalsecondactuel=parseInt(currentimesecondestr[0]*60*60)+parseInt(currentimesecondestr[1]*60)+parseInt(currentimesecondestr[2]);
+	
+	
+	var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
+	 if (isNaN(totalseconddusoustitre)) {
+  totalseconddusoustitre=0;
+  }else{
+	  	if(totalsecondactuel==totalseconddusoustitre){
+		
+				for (let k = 0; k <3; k++) {
+					alert(k);
+					
+					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
+			
+				}
+		
+		
+	}
+  }
+
+	
+
+	
+	  }
 };
 
 
@@ -90,10 +136,9 @@ btvid3.onclick = (e) => {
 
 
 	
-     //recuperation des soustritre du tableau
-	  var x = document.getElementById("table_st").rows[2].cells;
-	  var longueur= document.getElementById("table_st").rows[2].length;
-	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
+
+	  
+	 
 	  
 	  
 	  //recupere les donnees du tableau pour la sauvegarde dans un fichier
@@ -123,12 +168,12 @@ function change_video(){
 	myvideo.src = videos[video_num].url;
 	//recuperation du tableau des soustitres pour la timelinelastbar
 	
-		for (let i = 0; i <longueur; i++) {
+	/*	for (let i = 0; i <longueur; i++) {
 			
 			lastbarsoustitre[i].innerHTML=x[i].innerHTML;
 	
 		}
-		
+		*/
      
 	    
 	
