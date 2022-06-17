@@ -89,14 +89,20 @@ btvid3.onclick = (e) => {
 	
 		
 	  subtitles.innerHTML=x[0].innerHTML+"   "+x[1].innerHTML+"   "+x[2].innerHTML;
-	  alert(subtitles.innerHTML);
 		
 		
 	  }
 
 	  
 function change_video(){
-	/*caculatespeed();*/
+	
+	var chars = videos[video_num].duration.split(":");
+     //convertion en seconde
+ 
+	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
+	
+	alert(totalsecond);
+	speed=886/totalsecond;
 	
 	nom_video.innerHTML = videos[video_num].name;
 	duree_video.innerHTML = videos[video_num].duration;
@@ -228,7 +234,7 @@ function openfileDialog() {
 //gestion du canva
 var canvas,ctx
 let posx = 0
-let speed = 1; // controlée par les boutons
+let speed = 0; // controlée par les boutons
 let rectWidth = 11;
 let mousex, mousey;
 /*

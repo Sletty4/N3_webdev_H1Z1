@@ -190,44 +190,11 @@ pas info
 </div>
 
 
-
-
-
-
-
-<div id="subtit">
-<label for="subtitles"></label>
-
-<textarea id="subtitles" name="subtitles" rows="20" cols="50">
-WEBVTT
-
-00:01.000 --> 00:04.000
-Ne jamais boire de l'azote liquide.
-
-00:05.000 --> 00:09.000
-- Cela peut perforer l'estomac.
-- On peut en mourir.
-</textarea>
-</div>
 <div id="bout">
 
 <a href="#" id="lnkdownload">download </a>
 </div>
 <div>
-
-</div>
-
-<div class="square">
-
-<div id="playbar">
-
-<canvas width="886 px"  height="15 px" style=" border:1px solid #000000;background: #2F2638 0% 0% no-repeat padding-box;
- border: 1px solid #333232;
-  opacity: 1;">
-
-</canvas>
-
-</div>
 
 </div>
 

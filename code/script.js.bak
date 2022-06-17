@@ -88,15 +88,21 @@ btvid3.onclick = (e) => {
 		  
 	
 		
-	  subtitles.innerHTML=x[0].innerHTML+x[1].innerHTML;
-	  alert(subtitles.innerHTML);
+	  subtitles.innerHTML=x[0].innerHTML+"   "+x[1].innerHTML+"   "+x[2].innerHTML;
 		
 		
 	  }
 
 	  
 function change_video(){
-	/*caculatespeed();*/
+	
+	var chars = videos[video_num].duration.split(":");
+     //convertion en seconde
+ 
+	var totalsecond=parseInt(chars[0]*60*60)+parseInt(chars[1]*60)+parseInt(chars[2]);
+	
+	alert(totalsecond);
+	speed=886/totalsecond;
 	
 	nom_video.innerHTML = videos[video_num].name;
 	duree_video.innerHTML = videos[video_num].duration;
