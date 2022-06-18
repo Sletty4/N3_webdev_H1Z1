@@ -39,6 +39,8 @@ let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
 
 let btsave = document.getElementById("btsave")
+/*let btappliquer = document.getElementById("btappliquer")*/
+
 let btload =  document.getElementById("btcharger")
 
 let subtitles = document.getElementById("subtitles")
@@ -219,6 +221,10 @@ btload.onclick = (e) => {
 btsave.onclick = (e) => {
 	makeLink (subtitles.value);
 }
+/*
+btappliquer.onclick = (e) => {
+	makeLink (subtitles.value);
+}/*
 
 /*
 btsauvegarder.onclick=(e)=>{

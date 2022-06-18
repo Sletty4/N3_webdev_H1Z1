@@ -101,7 +101,7 @@ window.onTimeUpdate = (e) => {
 	  	if(totalsecondactuel==totalseconddusoustitre){
 		
 				for (let k = 0; k <3; k++) {
-					alert(k);
+					
 					
 					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
 			
