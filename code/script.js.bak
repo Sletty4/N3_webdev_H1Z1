@@ -39,7 +39,7 @@ let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
 
 let btsave = document.getElementById("btsave")
-/*let btappliquer = document.getElementById("btappliquer")*/
+let btappliquer = document.getElementById("btappliquer")
 
 let btload =  document.getElementById("btcharger")
 
@@ -50,8 +50,9 @@ let subtitles = document.getElementById("subtitles")
 let btplus = document.getElementById("btplus")
 let table = document.getElementById("table_stbis")
 
+var monfichier=document.getElementById('fileLoader');
 
-
+var arrayFromFile;
 //***************
      //recuperation des soustritre du tableau
 	  var x = document.getElementById("table_st").rows[2].cells;
@@ -249,21 +250,43 @@ btsuiv.onclick = (e) => {
 
 btload.onclick = (e) => {
 	
-	var monfichier=document.getElementById('fileLoader');
+	
 	monfichier.click();
 	
-	loadFile(document.getElementById('fileLoader').files[0])"
+
 }
 
   async function loadFile(file) {
         let text = await file.text();
+		arrayFromFile=text.split(" ");
 		
-        alert(text);
+        alert(arrayFromFile);
     }
 
 btsave.onclick = (e) => {
 	 savetabletofile();
 	makeLink (subtitles.value);
+}
+btappliquer.onclick=(e)=>{
+	
+		loadFile(document.getElementById('fileLoader').files[0]);
+	
+	var nouvelleLigne = table.insertRow(table.rows.length);
+	var Temps = document.getElementById('Temps').value;
+	var Durée = document.getElementById('Durée').value;
+	var Texte = document.getElementById('Texte').value;
+    var nouvelleCellule = nouvelleLigne.insertCell(0);
+	
+	var nouveauTexte = document.createTextNode(arrayFromFile[0]);
+    nouvelleCellule.appendChild(nouveauTexte);
+	
+    var nouvelleCellule = nouvelleLigne.insertCell(1);
+	var nouveauTexte = document.createTextNode(arrayFromFile[1]);
+    nouvelleCellule.appendChild(nouveauTexte);
+    var nouvelleCellule = nouvelleLigne.insertCell(2);
+	var nouveauTexte = document.createTextNode(arrayFromFile[2]);
+    nouvelleCellule.appendChild(nouveauTexte);
+	
 }
 
 function myFunctionHide() {
