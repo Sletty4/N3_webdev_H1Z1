@@ -112,10 +112,10 @@ window.onTimeUpdate = (e) => {
                      totalseconddusoustitre=0;
               }else{
 	  	          if(totalsecondactuel==totalseconddusoustitre){
-					  if(dessineffectue==0){
+					  
 						drawpoint(); 
-                          dessineffectue=1;						
-					  }
+                          						
+					  
 					  
 		
 				      for (let k = 0; k <3; k++) {
@@ -133,7 +133,6 @@ window.onTimeUpdate = (e) => {
 
 	
 	  }
-	  dessineffectue=0;
 };
 
 
