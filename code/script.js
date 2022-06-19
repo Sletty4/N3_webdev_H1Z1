@@ -71,6 +71,8 @@ let mousex, mousey;
 var dessineffectue=0;
 var ontimeupdateratehandler=0;
 
+const positionofmysubtitle = [];
+
 window.onTimeUpdate = (e) => {
 
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
@@ -94,6 +96,7 @@ window.onTimeUpdate = (e) => {
     
 	var nombredeligne=document.getElementById("table_st").rows.length;
 	
+	var incrementation =0;
 	
 	//********************************************************************detection de soustitres
 	 for (let i = 1; i < nombredeligne; i++) {
@@ -119,9 +122,12 @@ window.onTimeUpdate = (e) => {
 					
 					  
 						
-									//pour reduire le temps de rafraichissement
+									//pour reduire le temps de rafraichissement car trop eleve
 								   if(dessineffectue==0){
+									   positionofmysubtitle[incrementation]=posx;
 									   drawpoint();
+									   
+									   incrementation=incrementation+1;
 									   
 									   dessineffectue=1;
 								   }else{
@@ -269,8 +275,9 @@ btappliquer.onclick=(e)=>{
 	
 	loadFile(document.getElementById('fileLoader').files[0]);
 	
-	
-	for(let h=3;h<arrayFromFile.length/3;h=h+3){
+	//on elenve les nom de colonne
+	for(let h=3;h<arrayFromFile.length-3;h=h+3){
+			alert(h);
 		
 			var nouvelleLigne = table.insertRow(table.rows.length);
 
@@ -382,6 +389,25 @@ function init(){
 
 }
 
+function verifyMouseCoordinate(){
+	
+	for(let l=0;l<positionofmysubtitle.length;l++){
+		
+			if(mousex<positionofmysubtitle[l]+34&&mousex>positionofmysubtitle[l]){
+		
+		if(mousey<35&&mousey>0){
+			alert(mousex);
+			posx=positionofmysubtitle[l];
+			
+			
+		}
+	   }
+	
+	}
+	
+
+}
+
  //fonction de dessin appelée en boucle
  function draw() {
 	
@@ -393,6 +419,8 @@ function init(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(posx,0,rectWidth,16);
+	
+     verifyMouseCoordinate();
  }
  let img = document.getElementById("imgSource");
 function drawpoint() {
