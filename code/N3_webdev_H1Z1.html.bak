@@ -175,9 +175,9 @@ pas info
 		
              <table id="lastbarsoustitre">
 			  <tr >
-				<th>00:00:05</th>
-				<th>5s</th>
-				<th >Bonjour monsieur, quelle heure est-il ?</th>
+				<th>00:00:00</th>
+				<th>NaN</th>
+				<th >NaN</th>
 			  </tr>
 			  
 			</table>

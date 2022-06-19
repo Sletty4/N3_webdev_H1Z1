@@ -79,24 +79,26 @@ window.onTimeUpdate = (e) => {
 	//avance avec la video
 	speed=886/totalsecond*totalsecondactuel;
 	
-	
-	
+    
+	var nombredeligne=document.getElementById("table_st").rows.length;
+				
 	//********************************************************************detection de soustitres
-	 for (let i = 0; i < 2; i++) {
+	 for (let i = 1; i < nombredeligne; i++) {
 		  
-		  var y = document.getElementById("table_st").rows[i].cells;
-		  
-		 
-     //convertion en seconde
-	 var currentimesecondestr = current_time_display.innerHTML.split(":");
-	 //on prend la premiere partie du tableau pour avec la position du soustitre dans le temps
-	 var subtitlesecondestr = y[0].innerHTML.split(":");
+				var y = document.getElementById("table_st").rows[i].cells;
+				
+					  
+					 
+				 //convertion en seconde
+				var currentimesecondestr = current_time_display.innerHTML.split(":");
+				 //on prend la premiere partie du tableau pour avec la position du soustitre dans le temps
+				var subtitlesecondestr = y[0].innerHTML.split(":");
 
-   
-    var totalsecondactuel=parseInt(currentimesecondestr[0]*60*60)+parseInt(currentimesecondestr[1]*60)+parseInt(currentimesecondestr[2]);
-	
-	
-	var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
+			   
+				var totalsecondactuel=parseInt(currentimesecondestr[0]*60*60)+parseInt(currentimesecondestr[1]*60)+parseInt(currentimesecondestr[2]);
+				
+				
+				var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
 	 if (isNaN(totalseconddusoustitre)) {
   totalseconddusoustitre=0;
   }else{
@@ -104,7 +106,7 @@ window.onTimeUpdate = (e) => {
 		
 				for (let k = 0; k <3; k++) {
 					
-					
+					alert(totalsecondactuel);
 					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
 			
 				}
@@ -145,13 +147,14 @@ btvid3.onclick = (e) => {
 	  
 	  //recupere les donnees du tableau pour la sauvegarde dans un fichier
 	  function savetabletofile(){
+		    var nombredeligne=document.getElementById("table_st").rows.length;
+			
+
+			for (let i = 0; i < nombredeligne; i++) {
 		  
-	
-			 for (let i = 0; i < 3; i++) {
-		  
-		  var z = document.getElementById("table_st").rows[i].cells;
-		  
-	  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"\n";
+				  var z = document.getElementById("table_st").rows[i].cells;
+				  
+				  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"\n";
 			 }
 		
 	  }
@@ -174,7 +177,7 @@ function change_video(){
 
 	    
 	
- savetabletofile();
+
 	
 	
 }
@@ -219,6 +222,7 @@ btload.onclick = (e) => {
 }
 
 btsave.onclick = (e) => {
+	 savetabletofile();
 	makeLink (subtitles.value);
 }
 /*
