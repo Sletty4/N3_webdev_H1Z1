@@ -57,7 +57,15 @@ let table = document.getElementById("table_stbis")
 	  var x = document.getElementById("table_st").rows[2].cells;
 	  var longueur= document.getElementById("table_st").rows[2].length;
 	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
-	  //*********************
+	  
+	  //*********************variable pour les canvas
+	  //gestion du canva
+var canvas,ctx
+var canvas2,ctx2
+let posx = 0
+let speed = 0; // controlée par les boutons
+let rectWidth = 11;
+let mousex, mousey;
 
 window.onTimeUpdate = (e) => {
 
@@ -81,7 +89,8 @@ window.onTimeUpdate = (e) => {
 	
     
 	var nombredeligne=document.getElementById("table_st").rows.length;
-				
+	var dessineffectue=0;
+	
 	//********************************************************************detection de soustitres
 	 for (let i = 1; i < nombredeligne; i++) {
 		  
@@ -99,14 +108,19 @@ window.onTimeUpdate = (e) => {
 				
 				
 				var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
-	 if (isNaN(totalseconddusoustitre)) {
-  totalseconddusoustitre=0;
-  }else{
-	  	if(totalsecondactuel==totalseconddusoustitre){
+	          if (isNaN(totalseconddusoustitre)) {
+                     totalseconddusoustitre=0;
+              }else{
+	  	          if(totalsecondactuel==totalseconddusoustitre){
+					  if(dessineffectue==0){
+						drawpoint(); 
+                          dessineffectue=1;						
+					  }
+					  
 		
-				for (let k = 0; k <3; k++) {
+				      for (let k = 0; k <3; k++) {
 					
-					alert(totalsecondactuel);
+					
 					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
 			
 				}
@@ -284,13 +298,7 @@ function openfileDialog() {
 }
 
 
-//gestion du canva
-var canvas,ctx
-var canvas2,ctx2
-let posx = 0
-let speed = 0; // controlée par les boutons
-let rectWidth = 11;
-let mousex, mousey;
+
 
 function init(){
 	
@@ -323,26 +331,26 @@ function init(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(posx,0,rectWidth,16);
-	/*drawMouseCoordinates();*/
  }
- 
+ let img = document.getElementById("imgSource");
 function drawpoint() {
 	
 	
-	posx = speed	
+		
 	if(posx >= canvas2.width-rectWidth){
 		posx = canvas2.width-rectWidth
 	}
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = "#FFFFFF";
-	ctx.fillRect(posx,0,rectWidth,16);
+	
+	//ctx2.clearRect(0, 0, canvas.width, 34);
+    ctx2.drawImage(img, posx, 0, 34, 34);
 	/*drawMouseCoordinates();*/
  }
 
 function gameLoop(timeStamp) {
-	drawpoint()
+	
 	
 	draw()
+	
 	
 	window.requestAnimationFrame(gameLoop);
 }
