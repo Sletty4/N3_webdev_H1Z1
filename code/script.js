@@ -215,9 +215,7 @@ btsuiv.onclick = (e) => {
 }
 
 btload.onclick = (e) => {
-	 var loadfile = document.getElementById("fileLoader");
-      loadfile.click();
-	//loadsubtitles();
+	loadsubtitles();
 }
 
 btsave.onclick = (e) => {
@@ -280,11 +278,11 @@ function loadsubtitles(){
 }
 
 //pour choisir un fichier a partir de l explorateur
-/*
+
 function openfileDialog() {
     $("#fileLoader").click();
 }
-*/
+
 
 //gestion du canva
 var canvas,ctx

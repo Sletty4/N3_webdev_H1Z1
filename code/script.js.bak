@@ -69,6 +69,8 @@ let mousex, mousey;
 	  //*********************
 >>>>>>> parent of c22d320 (Merge branch 'main' of https://github.com/Sletty4/N3_webdev_H1Z1)
 
+let dessineffectue=0;
+
 window.onTimeUpdate = (e) => {
 
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
@@ -92,10 +94,14 @@ window.onTimeUpdate = (e) => {
 <<<<<<< HEAD
     
 	var nombredeligne=document.getElementById("table_st").rows.length;
+<<<<<<< HEAD
 	var dessineffectue=0;
 =======
 	
 >>>>>>> parent of c22d320 (Merge branch 'main' of https://github.com/Sletty4/N3_webdev_H1Z1)
+=======
+	
+>>>>>>> parent of 5ba3913 (bouton charger)
 	
 	//********************************************************************detection de soustitres
 	 for (let i = 0; i < 2; i++) {
@@ -118,10 +124,10 @@ window.onTimeUpdate = (e) => {
                      totalseconddusoustitre=0;
               }else{
 	  	          if(totalsecondactuel==totalseconddusoustitre){
-					  
+					  if(dessineffectue==0){
 						drawpoint(); 
-                          						
-					  
+                          dessineffectue=1;						
+					  }
 					  
 =======
    
@@ -150,9 +156,10 @@ window.onTimeUpdate = (e) => {
 
 	
 	  }
+	  
+
+
 };
-
-
 btvid1.onclick = (e) => {
 	video_num = 0;
 	change_video();
@@ -355,6 +362,10 @@ function init(){
 	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(posx,0,rectWidth,16);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	dessineffectue=0;
+>>>>>>> parent of 5ba3913 (bouton charger)
  }
  let img = document.getElementById("imgSource");
 function drawpoint() {
