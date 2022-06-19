@@ -126,7 +126,6 @@
 <label for="subtitles"></label>
 
 <textarea id="subtitles" style="display: none;" name="subtitles">
-pas info
 </textarea>
 
 <div>
@@ -146,8 +145,14 @@ pas info
 <div id="Timeline">
 
 		<div>
-		<input type="button" name="marqueur de position " id="marqueur_deposition">
+	     <img id="imgSource" src="image/mqposition.svg" style="display:none;"/>
+		
+			<canvas id="marqueurdepositioncanva" width="886" height="34"
+			style="border:1px solid #c3c3c3;">
+			Your browser does not support the canvas element.
+			</canvas>
 		</div>
+		
 		
 					<canvas id="Timelinebar1" width="886" height="15"
 			style="border:1px solid #c3c3c3;">
@@ -163,7 +168,7 @@ pas info
 			<table>
 			  <tr>
 				<th>00:00:00</th>
-				<th>00:00:00</th>
+				<th id="textmichemin">00:00:00</th>
 				<th id="TimelineDuration">00:00:00</th>
 			  </tr>
 			  
@@ -175,9 +180,9 @@ pas info
 		
              <table id="lastbarsoustitre">
 			  <tr >
-				<th>00:00:05</th>
-				<th>5s</th>
-				<th >Bonjour monsieur, quelle heure est-il ?</th>
+				<th>00:00:00</th>
+				<th>NaN</th>
+				<th >NaN</th>
 			  </tr>
 			  
 			</table>
