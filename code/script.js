@@ -22,11 +22,6 @@ let videos = [
 	},
 ]
 
-$('#csvfile').change(function() {
-    // On sélectionne le formulaire et on le poste
-    $('#btchrger').submit();
-});
-
 let video_num;
 let nom_video = document.getElementById("nom_video");
 let duree_video = document.getElementById("duree_video");
@@ -62,15 +57,7 @@ let table = document.getElementById("table_stbis")
 	  var x = document.getElementById("table_st").rows[2].cells;
 	  var longueur= document.getElementById("table_st").rows[2].length;
 	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
-	  
-	  //*********************variable pour les canvas
-	  //gestion du canva
-var canvas,ctx
-var canvas2,ctx2
-let posx = 0
-let speed = 0; // controlée par les boutons
-let rectWidth = 11;
-let mousex, mousey;
+	  //*********************
 
 window.onTimeUpdate = (e) => {
 
@@ -92,38 +79,30 @@ window.onTimeUpdate = (e) => {
 	//avance avec la video
 	speed=886/totalsecond*totalsecondactuel;
 	
-    
-	var nombredeligne=document.getElementById("table_st").rows.length;
-	var dessineffectue=0;
+	
 	
 	//********************************************************************detection de soustitres
-	 for (let i = 1; i < nombredeligne; i++) {
+	 for (let i = 0; i < 2; i++) {
 		  
-				var y = document.getElementById("table_st").rows[i].cells;
-				
-					  
-					 
-				 //convertion en seconde
-				var currentimesecondestr = current_time_display.innerHTML.split(":");
-				 //on prend la premiere partie du tableau pour avec la position du soustitre dans le temps
-				var subtitlesecondestr = y[0].innerHTML.split(":");
+		  var y = document.getElementById("table_st").rows[i].cells;
+		  
+		 
+     //convertion en seconde
+	 var currentimesecondestr = current_time_display.innerHTML.split(":");
+	 //on prend la premiere partie du tableau pour avec la position du soustitre dans le temps
+	 var subtitlesecondestr = y[0].innerHTML.split(":");
 
-			   
-				var totalsecondactuel=parseInt(currentimesecondestr[0]*60*60)+parseInt(currentimesecondestr[1]*60)+parseInt(currentimesecondestr[2]);
-				
-				
-				var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
-	          if (isNaN(totalseconddusoustitre)) {
-                     totalseconddusoustitre=0;
-              }else{
-	  	          if(totalsecondactuel==totalseconddusoustitre){
-					  
-						drawpoint(); 
-                          						
-					  
-					  
+   
+    var totalsecondactuel=parseInt(currentimesecondestr[0]*60*60)+parseInt(currentimesecondestr[1]*60)+parseInt(currentimesecondestr[2]);
+	
+	
+	var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
+	 if (isNaN(totalseconddusoustitre)) {
+  totalseconddusoustitre=0;
+  }else{
+	  	if(totalsecondactuel==totalseconddusoustitre){
 		
-				      for (let k = 0; k <3; k++) {
+				for (let k = 0; k <3; k++) {
 					
 					
 					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
@@ -166,14 +145,13 @@ btvid3.onclick = (e) => {
 	  
 	  //recupere les donnees du tableau pour la sauvegarde dans un fichier
 	  function savetabletofile(){
-		    var nombredeligne=document.getElementById("table_st").rows.length;
-			
-
-			for (let i = 0; i < nombredeligne; i++) {
 		  
-				  var z = document.getElementById("table_st").rows[i].cells;
-				  
-				  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"\n";
+	
+			 for (let i = 0; i < 3; i++) {
+		  
+		  var z = document.getElementById("table_st").rows[i].cells;
+		  
+	  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"\n";
 			 }
 		
 	  }
@@ -190,14 +168,13 @@ function change_video(){
     TimelineDuration.innerHTML = videos[video_num].duration;
 	
 	
-	
 	nom_video.innerHTML = videos[video_num].name;
 	duree_video.innerHTML = videos[video_num].duration;
 	myvideo.src = videos[video_num].url;
 
 	    
 	
-
+ savetabletofile();
 	
 	
 }
@@ -244,15 +221,19 @@ btload.onclick = (e) => {
 }
 
 btsave.onclick = (e) => {
-	 savetabletofile();
 	makeLink (subtitles.value);
 }
 /*
 btappliquer.onclick = (e) => {
-	videos[video_num].subtitle=
-}*/
+	makeLink (subtitles.value);
+}/*
 
-
+/*
+btsauvegarder.onclick=(e)=>{
+	
+	makeLink (table_st.value);
+}
+*/
 btplus.onclick = (e) => {
 	var nouvelleLigne = table.insertRow(table.rows.length);
 	var Temps = document.getElementById('Temps').value;
@@ -293,17 +274,8 @@ function makeLink(trad_text){
   hf.innerHTML = `download ${hf.download}`;
 
 }
-function test(){
-	document.getElementById("douille").click();
-	let t=document.getElementById("douille");
-	while(t==null){
 
-	}
-	document.getElementById("douille2").click();
-	subtitles.innerHTML = fetch(videos[video_num].subtitle);
-}
 function loadsubtitles(){
-	
 	subtitles.innerHTML = fetch(videos[video_num].subtitle);
 }
 
@@ -314,20 +286,28 @@ function openfileDialog() {
 }
 */
 
+//gestion du canva
+var canvas,ctx
+let posx = 0
+let speed = 0; // controlée par les boutons
+let rectWidth = 11;
+let mousex, mousey;
+/*
+function caculatespeed(){
+	
 
+	speed=(myvideo.duration*1000)/886;
+	
+	
+}*/
 
 function init(){
-	
-	canvas2 = document.getElementById("marqueurdepositioncanva");
-	ctx2=canvas2.getContext("2d");
 	
 	
 	// récupération de l'objet canvas par son id et apres qu'il ait été chargé
 	canvas = document.getElementById("Timelinebar1");
 	ctx = canvas.getContext("2d");
-	
-	//pour recuperer la position de la souris
-		canvas2.onmousemove=(e) => {
+		canvas.onmousemove=(e) => {
 		mousex = e.offsetX;
 		mousey = e.offsetY;
 		};
@@ -347,26 +327,14 @@ function init(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(posx,0,rectWidth,16);
- }
- let img = document.getElementById("imgSource");
-function drawpoint() {
-	
-	
-		
-	if(posx >= canvas2.width-rectWidth){
-		posx = canvas2.width-rectWidth
-	}
-	
-	//ctx2.clearRect(0, 0, canvas.width, 34);
-    ctx2.drawImage(img, posx, 0, 34, 34);
 	/*drawMouseCoordinates();*/
  }
+ 
+
 
 function gameLoop(timeStamp) {
 	
-	
 	draw()
-	
 	
 	window.requestAnimationFrame(gameLoop);
 }

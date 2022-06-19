@@ -126,6 +126,7 @@
 <label for="subtitles"></label>
 
 <textarea id="subtitles" style="display: none;" name="subtitles">
+pas info
 </textarea>
 
 <div>
@@ -145,16 +146,15 @@
 <div id="Timeline">
 
 		<div>
-	     <img id="imgSource" src="image/mqposition.svg" style="display:none;"/>
-		
-			<canvas id="marqueurdepositioncanva" width="886" height="34"
-			style="border:1px solid #c3c3c3;">
-			Your browser does not support the canvas element.
-			</canvas>
+		<input type="button" name="marqueur de position " id="marqueur_deposition">
 		</div>
 		
+<<<<<<< HEAD
 		
 			<canvas id="Timelinebar1" width="886" height="15"
+=======
+					<canvas id="Timelinebar1" width="886" height="15"
+>>>>>>> parent of c22d320 (Merge branch 'main' of https://github.com/Sletty4/N3_webdev_H1Z1)
 			style="border:1px solid #c3c3c3;">
 			Your browser does not support the canvas element.
 			</canvas>
@@ -168,7 +168,7 @@
 			<table>
 			  <tr>
 				<th>00:00:00</th>
-				<th id="textmichemin">00:00:00</th>
+				<th>00:00:00</th>
 				<th id="TimelineDuration">00:00:00</th>
 			  </tr>
 			  
@@ -180,9 +180,9 @@
 		
              <table id="lastbarsoustitre">
 			  <tr >
-				<th>00:00:00</th>
-				<th>NaN</th>
-				<th >NaN</th>
+				<th>00:00:05</th>
+				<th>5s</th>
+				<th >Bonjour monsieur, quelle heure est-il ?</th>
 			  </tr>
 			  
 			</table>
