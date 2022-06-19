@@ -126,7 +126,6 @@
 <label for="subtitles"></label>
 
 <textarea id="subtitles" style="display: none;" name="subtitles">
-pas info
 </textarea>
 
 <div>

@@ -106,7 +106,7 @@ window.onTimeUpdate = (e) => {
 		
 				for (let k = 0; k <3; k++) {
 					
-					alert(totalsecondactuel);
+					
 					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
 			
 				}
@@ -171,6 +171,7 @@ function change_video(){
     TimelineDuration.innerHTML = videos[video_num].duration;
 	
 	
+	
 	nom_video.innerHTML = videos[video_num].name;
 	duree_video.innerHTML = videos[video_num].duration;
 	myvideo.src = videos[video_num].url;
@@ -227,15 +228,10 @@ btsave.onclick = (e) => {
 }
 /*
 btappliquer.onclick = (e) => {
-	makeLink (subtitles.value);
-}/*
+	videos[video_num].subtitle=
+}*/
 
-/*
-btsauvegarder.onclick=(e)=>{
-	
-	makeLink (table_st.value);
-}
-*/
+
 btplus.onclick = (e) => {
 	var nouvelleLigne = table.insertRow(table.rows.length);
 	var Temps = document.getElementById('Temps').value;
@@ -290,26 +286,24 @@ function openfileDialog() {
 
 //gestion du canva
 var canvas,ctx
+var canvas2,ctx2
 let posx = 0
 let speed = 0; // controlée par les boutons
 let rectWidth = 11;
 let mousex, mousey;
-/*
-function caculatespeed(){
-	
-
-	speed=(myvideo.duration*1000)/886;
-	
-	
-}*/
 
 function init(){
+	
+	canvas2 = document.getElementById("marqueurdepositioncanva");
+	ctx2=canvas2.getContext("2d");
 	
 	
 	// récupération de l'objet canvas par son id et apres qu'il ait été chargé
 	canvas = document.getElementById("Timelinebar1");
 	ctx = canvas.getContext("2d");
-		canvas.onmousemove=(e) => {
+	
+	//pour recuperer la position de la souris
+		canvas2.onmousemove=(e) => {
 		mousex = e.offsetX;
 		mousey = e.offsetY;
 		};
@@ -332,9 +326,21 @@ function init(){
 	/*drawMouseCoordinates();*/
  }
  
-
+function drawpoint() {
+	
+	
+	posx = speed	
+	if(posx >= canvas2.width-rectWidth){
+		posx = canvas2.width-rectWidth
+	}
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.fillStyle = "#FFFFFF";
+	ctx.fillRect(posx,0,rectWidth,16);
+	/*drawMouseCoordinates();*/
+ }
 
 function gameLoop(timeStamp) {
+	drawpoint()
 	
 	draw()
 	
