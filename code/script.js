@@ -233,7 +233,10 @@ btsuiv.onclick = (e) => {
 }
 
 btload.onclick = (e) => {
-	loadsubtitles();
+	
+	var monfichier=document.getElementById('fileLoader');
+	monfichier.click();
+	//loadsubtitles();
 }
 
 btsave.onclick = (e) => {
