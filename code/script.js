@@ -184,7 +184,7 @@ btvid3.onclick = (e) => {
 		  
 				  var z = document.getElementById("table_st").rows[i].cells;
 				  
-				  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"\n";
+				  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"  ";
 			 }
 		
 	  }
@@ -258,9 +258,7 @@ btload.onclick = (e) => {
 
   async function loadFile(file) {
         let text = await file.text();
-		arrayFromFile=text.split(" ");
-		
-        //alert(arrayFromFile);
+		arrayFromFile=text.split("  ");
     }
 
 btsave.onclick = (e) => {
@@ -269,23 +267,27 @@ btsave.onclick = (e) => {
 }
 btappliquer.onclick=(e)=>{
 	
-		loadFile(document.getElementById('fileLoader').files[0]);
+	loadFile(document.getElementById('fileLoader').files[0]);
 	
-	var nouvelleLigne = table.insertRow(table.rows.length);
-	var Temps = document.getElementById('Temps').value;
-	var Durée = document.getElementById('Durée').value;
-	var Texte = document.getElementById('Texte').value;
-    var nouvelleCellule = nouvelleLigne.insertCell(0);
 	
-	var nouveauTexte = document.createTextNode(arrayFromFile[0]);
-    nouvelleCellule.appendChild(nouveauTexte);
-	
-    var nouvelleCellule = nouvelleLigne.insertCell(1);
-	var nouveauTexte = document.createTextNode(arrayFromFile[1]);
-    nouvelleCellule.appendChild(nouveauTexte);
-    var nouvelleCellule = nouvelleLigne.insertCell(2);
-	var nouveauTexte = document.createTextNode(arrayFromFile[2]);
-    nouvelleCellule.appendChild(nouveauTexte);
+	for(let h=3;h<arrayFromFile.length/3;h=h+3){
+		
+			var nouvelleLigne = table.insertRow(table.rows.length);
+
+			var nouvelleCellule = nouvelleLigne.insertCell(0);
+			
+			var nouveauTexte = document.createTextNode(arrayFromFile[0+h]);
+			nouvelleCellule.appendChild(nouveauTexte);
+			
+			var nouvelleCellule = nouvelleLigne.insertCell(1);
+			var nouveauTexte = document.createTextNode(arrayFromFile[1+h]);
+			nouvelleCellule.appendChild(nouveauTexte);
+			var nouvelleCellule = nouvelleLigne.insertCell(2);
+			var nouveauTexte = document.createTextNode(arrayFromFile[2+h]);
+			nouvelleCellule.appendChild(nouveauTexte);
+		
+	}
+
 	
 }
 
