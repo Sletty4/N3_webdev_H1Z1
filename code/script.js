@@ -252,9 +252,14 @@ btload.onclick = (e) => {
 	var monfichier=document.getElementById('fileLoader');
 	monfichier.click();
 	
-	var fichierSelectionne = document.getElementById('fileLoader').files[0];
-	//loadsubtitles();
+	loadFile(document.getElementById('fileLoader').files[0]);
 }
+
+  async function loadFile(file) {
+        let text = await file.text();
+		
+        alert(text);
+    }
 
 btsave.onclick = (e) => {
 	 savetabletofile();
