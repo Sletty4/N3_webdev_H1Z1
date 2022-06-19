@@ -67,6 +67,9 @@ let speed = 0; // controlée par les boutons
 let rectWidth = 11;
 let mousex, mousey;
 
+var dessineffectue=0;
+var ontimeupdateratehandler=0;
+
 window.onTimeUpdate = (e) => {
 
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
@@ -89,7 +92,7 @@ window.onTimeUpdate = (e) => {
 	
     
 	var nombredeligne=document.getElementById("table_st").rows.length;
-	var dessineffectue=0;
+	
 	
 	//********************************************************************detection de soustitres
 	 for (let i = 1; i < nombredeligne; i++) {
@@ -110,29 +113,41 @@ window.onTimeUpdate = (e) => {
 				var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
 	          if (isNaN(totalseconddusoustitre)) {
                      totalseconddusoustitre=0;
-              }else{
-	  	          if(totalsecondactuel==totalseconddusoustitre){
+                 }else{
+	  	          if((totalsecondactuel==totalseconddusoustitre)){
+					
 					  
-						drawpoint(); 
-                          						
+						
+									
+								   if(dessineffectue==0){
+									   drawpoint();
+									   
+									   dessineffectue=1;
+								   }else{
+									 dessineffectue=0;  
+								   }
+								   
+								   
+							   			
 					  
 					  
 		
-				      for (let k = 0; k <3; k++) {
+				       for (let k = 0; k <3; k++) {
 					
 					
-					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
+					    lastbarsoustitre[k].innerHTML=y[k].innerHTML;
 			
-				}
+				        }
 		
 		
-	}
-  }
+	                }
+                }
 
 	
 
 	
-	  }
+	       }
+		
 };
 
 
@@ -236,6 +251,8 @@ btload.onclick = (e) => {
 	
 	var monfichier=document.getElementById('fileLoader');
 	monfichier.click();
+	
+	var fichierSelectionne = document.getElementById('fileLoader').files[0];
 	//loadsubtitles();
 }
 
@@ -244,22 +261,18 @@ btsave.onclick = (e) => {
 	makeLink (subtitles.value);
 }
 
-window.onload=function myFunctionHide() {
+function myFunctionHide() {
   var x = document.getElementById("timlin");
   var y = document.getElementById("ecrit");
   
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-    x.style.display = "none";
   }
   
     
   if (y.style.display === "none") {
     y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
+  } 
   
   
 }
