@@ -190,7 +190,7 @@ function change_video(){
 	duree_video.innerHTML = videos[video_num].duration;
 	myvideo.src = videos[video_num].url;
 
-	    
+	    myFunctionHide();
 	
 
 	
@@ -243,10 +243,22 @@ btsave.onclick = (e) => {
 	 savetabletofile();
 	makeLink (subtitles.value);
 }
-/*
-btappliquer.onclick = (e) => {
-	videos[video_num].subtitle=
-}*/
+
+function myFunctionHide() {
+  var x = document.getElementById("timlin");
+  var y = document.getElementById("ecrit");
+  
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+  
+    
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } 
+  
+  
+}
 
 
 btplus.onclick = (e) => {

@@ -140,15 +140,14 @@
 
 
 
-<div id="timlin">
+<div id="timlin" style="display: none;">
 <h2>Timeline</h2>
 <div id="Timeline">
 
 		<div>
 	     <img id="imgSource" src="image/mqposition.svg" style="display:none;"/>
 		
-			<canvas id="marqueurdepositioncanva" width="886" height="34"
-			style="border:1px solid #c3c3c3;">
+			<canvas id="marqueurdepositioncanva" width="886" height="34">
 			Your browser does not support the canvas element.
 			</canvas>
 		</div>
@@ -195,7 +194,7 @@
 </div>
 
 
-<div id="bout">
+<div id="bout" style="display: none;">
 
 <a href="#" id="lnkdownload">Telecharger le soustitre </a>
 </div>
