@@ -22,6 +22,11 @@ let videos = [
 	},
 ]
 
+$('#csvfile').change(function() {
+    // On sélectionne le formulaire et on le poste
+    $('#btchrger').submit();
+});
+
 let video_num;
 let nom_video = document.getElementById("nom_video");
 let duree_video = document.getElementById("duree_video");
@@ -288,8 +293,17 @@ function makeLink(trad_text){
   hf.innerHTML = `download ${hf.download}`;
 
 }
+function test(){
+	document.getElementById("douille").click();
+	let t=document.getElementById("douille");
+	while(t==null){
 
+	}
+	document.getElementById("douille2").click();
+	subtitles.innerHTML = fetch(videos[video_num].subtitle);
+}
 function loadsubtitles(){
+	
 	subtitles.innerHTML = fetch(videos[video_num].subtitle);
 }
 

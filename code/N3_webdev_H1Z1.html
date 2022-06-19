@@ -44,7 +44,7 @@
 
 
 <div id="gr_info">
-
+  
 <h2>Informations</h2>
 
 <div id="Informations">
@@ -83,7 +83,13 @@
 <h2>Sous-titres</h2>
 <div id="Sous-titres">
 <input type="file" id="fileLoader" name="files" style="display: none;" title="Load File" >
-<input type="button" value="CHARGER" name="charger" id="btcharger">
+<form method="post" action="" enctype="multipart/form-data" hidden="true">
+  <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
+  <input type="file" name="monfichier" id="douille"/>
+  <input type="submit" name="valider" value="Uploader" hidden="true" id="douille2"/>
+</form> 
+    
+<input type="button" value="CHARGER" name="charger" id="btcharger" onclick="test()">
 <input type="button" value="APPLIQUER" name="appliquer" id="btappliquer">
 <input type="button" value="SAUVEGARDER" name="sauvgarder" id="btsave">
 </div>
