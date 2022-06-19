@@ -154,7 +154,7 @@
 		</div>
 		
 		
-					<canvas id="Timelinebar1" width="886" height="15"
+			<canvas id="Timelinebar1" width="886" height="15"
 			style="border:1px solid #c3c3c3;">
 			Your browser does not support the canvas element.
 			</canvas>

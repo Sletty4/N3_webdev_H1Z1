@@ -67,8 +67,6 @@ let speed = 0; // controlée par les boutons
 let rectWidth = 11;
 let mousex, mousey;
 
-let dessineffectue=0;
-
 window.onTimeUpdate = (e) => {
 
 	let current_time = new Date(Math.round(e.target.currentTime * 1000))
@@ -91,7 +89,7 @@ window.onTimeUpdate = (e) => {
 	
     
 	var nombredeligne=document.getElementById("table_st").rows.length;
-	
+	var dessineffectue=0;
 	
 	//********************************************************************detection de soustitres
 	 for (let i = 1; i < nombredeligne; i++) {
@@ -114,10 +112,10 @@ window.onTimeUpdate = (e) => {
                      totalseconddusoustitre=0;
               }else{
 	  	          if(totalsecondactuel==totalseconddusoustitre){
-					  if(dessineffectue==0){
+					  
 						drawpoint(); 
-                          dessineffectue=1;						
-					  }
+                          						
+					  
 					  
 		
 				      for (let k = 0; k <3; k++) {
@@ -135,10 +133,9 @@ window.onTimeUpdate = (e) => {
 
 	
 	  }
-	  
-
-
 };
+
+
 btvid1.onclick = (e) => {
 	video_num = 0;
 	change_video();
@@ -334,7 +331,6 @@ function init(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(posx,0,rectWidth,16);
-	dessineffectue=0;
  }
  let img = document.getElementById("imgSource");
 function drawpoint() {
