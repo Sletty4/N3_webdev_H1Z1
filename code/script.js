@@ -72,6 +72,10 @@ var dessineffectue=0;
 var ontimeupdateratehandler=0;
 
 const positionofmysubtitle = [];
+var textoftheposition=[];
+
+var mouseisdown =0;
+var mouseisup=0;
 
 window.onTimeUpdate = (e) => {
 
@@ -125,6 +129,8 @@ window.onTimeUpdate = (e) => {
 									//pour reduire le temps de rafraichissement car trop eleve
 								   if(dessineffectue==0){
 									   positionofmysubtitle[incrementation]=posx;
+									   textoftheposition[incrementation]=y[2].innerHTML;
+									   
 									   drawpoint();
 									   
 									   incrementation=incrementation+1;
@@ -156,6 +162,7 @@ window.onTimeUpdate = (e) => {
 	       }
 		
 };
+
 
 
 btvid1.onclick = (e) => {
@@ -384,10 +391,20 @@ function init(){
 		mousex = e.offsetX;
 		mousey = e.offsetY;
 		};
+		canvas2.onmousedown=(e) => {
+		mouseisdown=1;
+		};
+		canvas2.onmouseup=(e) => {
+		mouseisup=1;
+		};
 	
 	window.requestAnimationFrame(gameLoop);
 
 }
+
+
+/*
+function mettreenSurbrillance(){}*/
 
 function verifyMouseCoordinate(){
 	
@@ -397,7 +414,16 @@ function verifyMouseCoordinate(){
 		
 		if(mousey<35&&mousey>0){
 			
-			posx=positionofmysubtitle[l];
+			if(mouseisdown==1){
+				alert(textoftheposition[l]);
+				/*
+				if(mouseisup==1){
+				mouseisdown=0;	
+				}*/
+				mouseisdown=0;	
+				
+			}
+			
 			
 			
 		}

@@ -99,6 +99,8 @@ h5{
 #myvideo{
 	width: 709px;
 	height: 313px;
+	text-align:center;
+	z-index:0;
 }
 
 #vid_st{
@@ -724,16 +726,6 @@ td{
 
 
 
-
-
-
-
-
-
-
-
-
-
 #marqueur_deposition {
 	background: #201c25 url('image/mqposition.svg') 0% 0% no-repeat padding-box;
 
@@ -743,7 +735,13 @@ td{
 	background-position: center;
 }
 
-
+#overlayText {
+ position:absolute;
+  top:30%;
+  left:20%;
+  z-index:1;
+  
+}
 
 
 

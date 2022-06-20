@@ -341,10 +341,7 @@ td{
 	opacity: 1;
 	text-align:center;
 }
-#marqueurdepositioncanva{
-	width: 886px;
-	height: 34px;
-}
+
 	
 	
 #Timelinebar1{
@@ -727,16 +724,6 @@ td{
 
 
 
-
-
-
-
-
-
-
-
-
-
 #marqueur_deposition {
 	background: #201c25 url('image/mqposition.svg') 0% 0% no-repeat padding-box;
 
@@ -746,7 +733,13 @@ td{
 	background-position: center;
 }
 
-
+#overlayText {
+ position:absolute;
+  top:30%;
+  left:20%;
+  z-index:1;
+  text-align:center;
+}
 
 
 
