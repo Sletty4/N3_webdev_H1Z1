@@ -277,7 +277,7 @@ btappliquer.onclick=(e)=>{
 	
 	//on elenve les nom de colonne
 	for(let h=3;h<arrayFromFile.length-3;h=h+3){
-			alert(h);
+			
 		
 			var nouvelleLigne = table.insertRow(table.rows.length);
 
@@ -396,7 +396,7 @@ function verifyMouseCoordinate(){
 			if(mousex<positionofmysubtitle[l]+34&&mousex>positionofmysubtitle[l]){
 		
 		if(mousey<35&&mousey>0){
-			alert(mousex);
+			
 			posx=positionofmysubtitle[l];
 			
 			
