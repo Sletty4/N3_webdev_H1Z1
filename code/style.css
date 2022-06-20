@@ -11,6 +11,57 @@ div{
 	color : #FFFFFFDE;
 }
 
+h1{
+	font-family : Roboto Mono,Regular;
+	font-weight: normal;
+	color : #FFFFFFDE;
+}
+h2{
+	font-family : Roboto, Medium;
+	font-weight: normal;
+	color : #FFFFFFDE;
+}
+h3{
+	font-family : Roboto, Medium;
+	color : #FFFFFFDE;
+}
+h4{
+	font-family : Roboto,Regular;
+	color : #828282DE;
+	margin : 3px;
+}
+h5{
+	font-family : Roboto, Medium;
+	color : #FFFFFFDE;
+}
+
+.bar {
+
+	top: 37px;
+	left: 66px;
+	width: 904px;
+	height: 103px;
+	border-bottom-style: solid;
+	}
+
+#btvid1{
+	width: 160px;
+	height: 120px;
+
+}
+
+#btvid2{
+	width: 160px;
+	height: 120px;
+
+}
+
+#btvid3{
+	width: 160px;
+	height: 120px;
+
+}
+
 #video_info{
     display: flex;
 	
@@ -81,6 +132,122 @@ div{
 	opacity: 1;
 	text-align:center;
 	margin: auto;
+}
+
+#btplay {
+	background: #201c25 url('image/Groupe 516.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+	cursor:pointer;
+}
+#btrewind {
+	background: #201c25 url('image/replay_10_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+	cursor:pointer;
+}
+#btforward {
+	background: #201c25 url('image/forward_10_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+	cursor:pointer;
+}
+#btprec {
+	background: #201c25 url('image/skip_previous_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+	cursor:pointer;
+}
+#btsuiv {
+	background: #201c25 url('image/skip_next_black_24dp.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+	cursor:pointer;
+}
+#btstop {
+	background: #201c25 url('image/Rectangle 740.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+	cursor:pointer;
+}
+#btpause {
+	background: #201c25 url('image/Groupe 523.svg') 0% 0% no-repeat padding-box;
+	opacity: 1;
+	width: 48px;
+	height: 48px;
+	margin: 34px 0;
+	background-position: center;
+	cursor:pointer;
+}
+
+#btcharger {
+	background: #BB86FC 0% 0% no-repeat padding-box;
+	border-radius: 4px;
+	opacity: 1;
+	width: 123px;
+	height: 36px;
+	margin: 34px 0;
+	font-family: Roboto;
+	color: #000000;
+	font-size: 14px;
+	background-image: url('image/icon-content-add_24px.svg');
+	background-position: 5% 50%;
+	text-indent: 15px;
+	line-height: 18px;
+	cursor:pointer;
+}
+
+
+#btappliquer {
+	background: #BB86FC 0% 0% no-repeat padding-box;
+	border-radius: 4px;
+	opacity: 1;
+	width: 133px;
+	height: 36px;
+	margin: 34px 0;
+	font-family: Roboto;
+	color: #000000;
+	font-size: 14px;
+	background-image: url('image/add_24px.svg');
+	background-position: 5% 50%;
+	text-indent: 15px;
+	line-height: 18px;
+	cursor:pointer;
+}
+
+
+#btsave {
+	background: #BB86FC 0% 0% no-repeat padding-box;
+	border-radius: 4px;
+	opacity: 1;
+	width: 161px;
+	height: 36px;
+	margin: 34px 0;
+	font-family: Roboto;
+	color: #000000;
+	background-image: url("image/save_black_24dp.svg");
+	background-position: 5% 50%;
+	text-indent: 15px;
+	line-height: 18px;
+	cursor:pointer;
 }
 
 #Ecriture {
@@ -223,10 +390,48 @@ td{
 	
 }
 
+.playbar {
+	padding-top: 50px;
+	padding-left: 80px;
+	top: 15 px;
+}
+
 @media screen and (max-width: 800px){
-	
-	#video_info{
+
+	.bar {
+
+
+		width: 100%;
+
+		}
+	#preview{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#btvid1{
+		width: 30%;
+		height: auto;
+
 		
+	}
+	
+	#btvid2{
+		width: 30%;
+		height: auto;
+
+		
+	}
+
+	#btvid3{
+		width: 30%;
+		height: auto;
+
+		
+	}
+
+	#video_info{
+		display:block;
 		
 	}
 
@@ -248,6 +453,7 @@ td{
 
 	#video_player{
 		width: 100%;
+		margin: 0px;
 	}
 
 	#gr_info{
@@ -260,6 +466,23 @@ td{
 		display: flex;
 		width: 100%;
 		height: 30px;
+		
+	}
+
+	#nom_video{
+		font-size: 0.75rem;
+	}
+
+	#duree_video{
+		font-size: 0.75rem;
+	}
+
+	#current_time{
+		font-size: 0.75rem;
+	}
+
+	h4{
+		font-size: 0.75rem;
 	}
 	
 	#vid_st{
@@ -279,6 +502,56 @@ td{
 	#Sous-titres {
 		width: 100%;
 		
+	}
+
+	#btplay {
+
+		width: 10%;
+
+	}
+	#btrewind {
+
+		width: 10%;
+
+	}
+	#btforward {
+		width: 10%;
+
+	}
+	#btprec {
+		width: 10%;
+	}
+	#btsuiv {
+		width: 10%;
+	}
+	#btstop {
+		width: 10%;
+	}
+	#btpause {
+		width: 10%;
+	}
+
+	#btcharger {
+
+		width: 25%;
+		font-size: 0.6rem;
+
+	}
+
+	#btappliquer {
+
+		width: 25%;
+		font-size: 0.6rem;
+
+
+	}
+	
+	
+	#btsave {
+
+		width: 25%;
+		font-size: 0.6rem;
+
 	}
 
 	#Ecriture {
@@ -337,7 +610,7 @@ td{
 
 		width: 30px;
 		height: 30px;
-		
+		margin-top: 30px;
 		left : 85%;
 	}
 
@@ -363,6 +636,19 @@ td{
 
 
 	}
+
+	#lastbarsoustitre{
+		
+		
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 30px 0;
+		background-position: center;
+		text-align:center;
+	
+	
+	}
+
 		
 
 }
@@ -380,29 +666,7 @@ td{
 
 
 
-h1{
-	font-family : Roboto Mono,Regular;
-	font-weight: normal;
-	color : #FFFFFFDE;
-}
-h2{
-	font-family : Roboto, Medium;
-	font-weight: normal;
-	color : #FFFFFFDE;
-}
-h3{
-	font-family : Roboto, Medium;
-	color : #FFFFFFDE;
-}
-h4{
-	font-family : Roboto,Regular;
-	color : #828282DE;
-	margin : 3px;
-}
-h5{
-	font-family : Roboto, Medium;
-	color : #FFFFFFDE;
-}
+
 
 
 
@@ -454,20 +718,6 @@ h5{
   background: #121212 0% 0% no-repeat padding-box;
   opacity: 1;
 }
-.bar {
-
-top: 37px;
-left: 66px;
-width: 904px;
-height: 103px;
-border-bottom-style: solid;
-}
-
-.playbar {
-  padding-top: 50px;
-  padding-left: 80px;
-  top: 15 px;
-}
 
 
 
@@ -475,124 +725,15 @@ border-bottom-style: solid;
 
 
 
-#btplay {
-	background: #201c25 url('image/Groupe 516.svg') 0% 0% no-repeat padding-box;
-	opacity: 1;
-	width: 48px;
-	height: 48px;
-	margin: 34px 0;
-	background-position: center;
-	cursor:pointer;
-}
-#btrewind {
-	background: #201c25 url('image/replay_10_black_24dp.svg') 0% 0% no-repeat padding-box;
-	opacity: 1;
-	width: 48px;
-	height: 48px;
-	margin: 34px 0;
-	background-position: center;
-	cursor:pointer;
-}
-#btforward {
-	background: #201c25 url('image/forward_10_black_24dp.svg') 0% 0% no-repeat padding-box;
-	opacity: 1;
-	width: 48px;
-	height: 48px;
-	margin: 34px 0;
-	background-position: center;
-	cursor:pointer;
-}
-#btprec {
-	background: #201c25 url('image/skip_previous_black_24dp.svg') 0% 0% no-repeat padding-box;
-	opacity: 1;
-	width: 48px;
-	height: 48px;
-	margin: 34px 0;
-	background-position: center;
-	cursor:pointer;
-}
-#btsuiv {
-	background: #201c25 url('image/skip_next_black_24dp.svg') 0% 0% no-repeat padding-box;
-	opacity: 1;
-	width: 48px;
-	height: 48px;
-	margin: 34px 0;
-	background-position: center;
-	cursor:pointer;
-}
-#btstop {
-	background: #201c25 url('image/Rectangle 740.svg') 0% 0% no-repeat padding-box;
-	opacity: 1;
-	width: 48px;
-	height: 48px;
-	margin: 34px 0;
-	background-position: center;
-	cursor:pointer;
-}
-#btpause {
-	background: #201c25 url('image/Groupe 523.svg') 0% 0% no-repeat padding-box;
-	opacity: 1;
-	width: 48px;
-	height: 48px;
-	margin: 34px 0;
-	background-position: center;
-	cursor:pointer;
-}
 
 
 
 
-#btcharger {
-	background: #BB86FC 0% 0% no-repeat padding-box;
-	border-radius: 4px;
-	opacity: 1;
-	width: 123px;
-	height: 36px;
-	margin: 34px 0;
-	font-family: Roboto;
-	color: #000000;
-	font-size: 14px;
-	background-image: url('image/icon-content-add_24px.svg');
-	background-position: 5% 50%;
-	text-indent: 15px;
-	line-height: 18px;
-	cursor:pointer;
-}
 
 
-#btappliquer {
-	background: #BB86FC 0% 0% no-repeat padding-box;
-	border-radius: 4px;
-	opacity: 1;
-	width: 133px;
-	height: 36px;
-	margin: 34px 0;
-	font-family: Roboto;
-	color: #000000;
-	font-size: 14px;
-	background-image: url('image/add_24px.svg');
-	background-position: 5% 50%;
-	text-indent: 15px;
-	line-height: 18px;
-	cursor:pointer;
-}
 
 
-#btsave {
-	background: #BB86FC 0% 0% no-repeat padding-box;
-	border-radius: 4px;
-	opacity: 1;
-	width: 161px;
-	height: 36px;
-	margin: 34px 0;
-	font-family: Roboto;
-	color: #000000;
-	background-image: url("image/save_black_24dp.svg");
-	background-position: 5% 50%;
-	text-indent: 15px;
-	line-height: 18px;
-	cursor:pointer;
-}
+
 
 
 
