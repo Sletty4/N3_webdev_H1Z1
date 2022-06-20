@@ -39,7 +39,7 @@ let btrewind = document.getElementById("btrewind")
 let btforward = document.getElementById("btforward")
 
 let btsave = document.getElementById("btsave")
-/*let btappliquer = document.getElementById("btappliquer")*/
+let btappliquer = document.getElementById("btappliquer")
 
 let btload =  document.getElementById("btcharger")
 
@@ -50,14 +50,28 @@ let subtitles = document.getElementById("subtitles")
 let btplus = document.getElementById("btplus")
 let table = document.getElementById("table_stbis")
 
+var monfichier=document.getElementById('fileLoader');
 
-
+var arrayFromFile;
 //***************
      //recuperation des soustritre du tableau
 	  var x = document.getElementById("table_st").rows[2].cells;
 	  var longueur= document.getElementById("table_st").rows[2].length;
 	  var lastbarsoustitre=document.getElementById("lastbarsoustitre").rows[0].cells;
-	  //*********************
+	  
+	  //*********************variable pour les canvas
+	  //gestion du canva
+var canvas,ctx
+var canvas2,ctx2
+let posx = 0
+let speed = 0; // controlée par les boutons
+let rectWidth = 11;
+let mousex, mousey;
+
+var dessineffectue=0;
+var ontimeupdateratehandler=0;
+
+const positionofmysubtitle = [];
 
 window.onTimeUpdate = (e) => {
 
@@ -79,44 +93,68 @@ window.onTimeUpdate = (e) => {
 	//avance avec la video
 	speed=886/totalsecond*totalsecondactuel;
 	
+    
+	var nombredeligne=document.getElementById("table_st").rows.length;
 	
+	var incrementation =0;
 	
 	//********************************************************************detection de soustitres
-	 for (let i = 0; i < 2; i++) {
+	 for (let i = 1; i < nombredeligne; i++) {
 		  
-		  var y = document.getElementById("table_st").rows[i].cells;
-		  
-		 
-     //convertion en seconde
-	 var currentimesecondestr = current_time_display.innerHTML.split(":");
-	 //on prend la premiere partie du tableau pour avec la position du soustitre dans le temps
-	 var subtitlesecondestr = y[0].innerHTML.split(":");
+				var y = document.getElementById("table_st").rows[i].cells;
+				
+					  
+					 
+				 //convertion en seconde
+				var currentimesecondestr = current_time_display.innerHTML.split(":");
+				 //on prend la premiere partie du tableau pour avec la position du soustitre dans le temps
+				var subtitlesecondestr = y[0].innerHTML.split(":");
 
-   
-    var totalsecondactuel=parseInt(currentimesecondestr[0]*60*60)+parseInt(currentimesecondestr[1]*60)+parseInt(currentimesecondestr[2]);
-	
-	
-	var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
-	 if (isNaN(totalseconddusoustitre)) {
-  totalseconddusoustitre=0;
-  }else{
-	  	if(totalsecondactuel==totalseconddusoustitre){
+			   
+				var totalsecondactuel=parseInt(currentimesecondestr[0]*60*60)+parseInt(currentimesecondestr[1]*60)+parseInt(currentimesecondestr[2]);
+				
+				
+				var totalseconddusoustitre=parseInt(subtitlesecondestr[0]*60*60)+parseInt(subtitlesecondestr[1]*60)+parseInt(subtitlesecondestr[2]);
+	          if (isNaN(totalseconddusoustitre)) {
+                     totalseconddusoustitre=0;
+                 }else{
+	  	          if((totalsecondactuel==totalseconddusoustitre)){
+					
+					  
+						
+									//pour reduire le temps de rafraichissement car trop eleve
+								   if(dessineffectue==0){
+									   positionofmysubtitle[incrementation]=posx;
+									   drawpoint();
+									   
+									   incrementation=incrementation+1;
+									   
+									   dessineffectue=1;
+								   }else{
+									 dessineffectue=0;  
+								   }
+								   
+								   
+							   			
+					  
+					  
 		
-				for (let k = 0; k <3; k++) {
+				       for (let k = 0; k <3; k++) {
 					
 					
-					lastbarsoustitre[k].innerHTML=y[k].innerHTML;
+					    lastbarsoustitre[k].innerHTML=y[k].innerHTML;
 			
-				}
+				        }
 		
 		
-	}
-  }
+	                }
+                }
 
 	
 
 	
-	  }
+	       }
+		
 };
 
 
@@ -145,13 +183,14 @@ btvid3.onclick = (e) => {
 	  
 	  //recupere les donnees du tableau pour la sauvegarde dans un fichier
 	  function savetabletofile(){
+		    var nombredeligne=document.getElementById("table_st").rows.length;
+			
+
+			for (let i = 0; i < nombredeligne; i++) {
 		  
-	
-			 for (let i = 0; i < 3; i++) {
-		  
-		  var z = document.getElementById("table_st").rows[i].cells;
-		  
-	  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"\n";
+				  var z = document.getElementById("table_st").rows[i].cells;
+				  
+				  subtitles.innerHTML=subtitles.innerHTML+z[0].innerHTML+"   "+z[1].innerHTML+"   "+z[2].innerHTML+"  ";
 			 }
 		
 	  }
@@ -168,13 +207,14 @@ function change_video(){
     TimelineDuration.innerHTML = videos[video_num].duration;
 	
 	
+	
 	nom_video.innerHTML = videos[video_num].name;
 	duree_video.innerHTML = videos[video_num].duration;
 	myvideo.src = videos[video_num].url;
 
-	    
+	    myFunctionHide();
 	
- savetabletofile();
+
 	
 	
 }
@@ -215,23 +255,66 @@ btsuiv.onclick = (e) => {
 }
 
 btload.onclick = (e) => {
-	loadsubtitles();
+	
+	
+	monfichier.click();
+	
+
 }
+
+  async function loadFile(file) {
+        let text = await file.text();
+		arrayFromFile=text.split("  ");
+    }
 
 btsave.onclick = (e) => {
+	 savetabletofile();
 	makeLink (subtitles.value);
 }
-/*
-btappliquer.onclick = (e) => {
-	makeLink (subtitles.value);
-}/*
-
-/*
-btsauvegarder.onclick=(e)=>{
+btappliquer.onclick=(e)=>{
 	
-	makeLink (table_st.value);
+	loadFile(document.getElementById('fileLoader').files[0]);
+	
+	//on elenve les nom de colonne
+	for(let h=3;h<arrayFromFile.length-3;h=h+3){
+			alert(h);
+		
+			var nouvelleLigne = table.insertRow(table.rows.length);
+
+			var nouvelleCellule = nouvelleLigne.insertCell(0);
+			
+			var nouveauTexte = document.createTextNode(arrayFromFile[0+h]);
+			nouvelleCellule.appendChild(nouveauTexte);
+			
+			var nouvelleCellule = nouvelleLigne.insertCell(1);
+			var nouveauTexte = document.createTextNode(arrayFromFile[1+h]);
+			nouvelleCellule.appendChild(nouveauTexte);
+			var nouvelleCellule = nouvelleLigne.insertCell(2);
+			var nouveauTexte = document.createTextNode(arrayFromFile[2+h]);
+			nouvelleCellule.appendChild(nouveauTexte);
+		
+	}
+
+	
 }
-*/
+
+function myFunctionHide() {
+  var x = document.getElementById("timlin");
+  var y = document.getElementById("ecrit");
+  
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+  
+    
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } 
+  
+  
+}
+
+
 btplus.onclick = (e) => {
 	var nouvelleLigne = table.insertRow(table.rows.length);
 	var Temps = document.getElementById('Temps').value;
@@ -284,33 +367,44 @@ function openfileDialog() {
 }
 
 
-//gestion du canva
-var canvas,ctx
-let posx = 0
-let speed = 0; // controlée par les boutons
-let rectWidth = 11;
-let mousex, mousey;
-/*
-function caculatespeed(){
-	
 
-	speed=(myvideo.duration*1000)/886;
-	
-	
-}*/
 
 function init(){
+	
+	canvas2 = document.getElementById("marqueurdepositioncanva");
+	ctx2=canvas2.getContext("2d");
 	
 	
 	// récupération de l'objet canvas par son id et apres qu'il ait été chargé
 	canvas = document.getElementById("Timelinebar1");
 	ctx = canvas.getContext("2d");
-		canvas.onmousemove=(e) => {
+	
+	//pour recuperer la position de la souris
+		canvas2.onmousemove=(e) => {
 		mousex = e.offsetX;
 		mousey = e.offsetY;
 		};
 	
 	window.requestAnimationFrame(gameLoop);
+
+}
+
+function verifyMouseCoordinate(){
+	
+	for(let l=0;l<positionofmysubtitle.length;l++){
+		
+			if(mousex<positionofmysubtitle[l]+34&&mousex>positionofmysubtitle[l]){
+		
+		if(mousey<35&&mousey>0){
+			alert(mousex);
+			posx=positionofmysubtitle[l];
+			
+			
+		}
+	   }
+	
+	}
+	
 
 }
 
@@ -325,14 +419,28 @@ function init(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(posx,0,rectWidth,16);
+	
+     verifyMouseCoordinate();
+ }
+ let img = document.getElementById("imgSource");
+function drawpoint() {
+	
+	
+		
+	if(posx >= canvas2.width-rectWidth){
+		posx = canvas2.width-rectWidth
+	}
+	
+	//ctx2.clearRect(0, 0, canvas.width, 34);
+    ctx2.drawImage(img, posx, 0, 34, 34);
 	/*drawMouseCoordinates();*/
  }
- 
-
 
 function gameLoop(timeStamp) {
 	
+	
 	draw()
+	
 	
 	window.requestAnimationFrame(gameLoop);
 }
