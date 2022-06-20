@@ -1,0 +1,12 @@
+NOTICE D utilisation 
+le fichier soustitres est la pour vous permettre de tester le site 
+-Quand vous voulez sauvegarder un soustitres vous clicker sur sauvergarder et ensuite telecharger 
+-Pour charger ce fichier il suffit de clciker sur charger(en prenant ce fichier) et ensuite appliquer 
+-si pendant la lecture vous voulez voir un soustitre en particulier il suffit d aller sur la timeline et de clicker 
+sur sa position 
+
+les soustitres son afficher en temps reels avec la video 
+
+Amusez Vous!!!!!
+
+Cordialement H1Z1
