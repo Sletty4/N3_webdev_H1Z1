@@ -11,6 +11,11 @@ div{
 	color : #FFFFFFDE;
 }
 
+#main{
+	display:grid;
+	place-content:center;
+}
+
 h1{
 	font-family : Roboto Mono,Regular;
 	font-weight: normal;
@@ -330,10 +335,10 @@ td{
 	opacity: 1;
 	width: 60px;
 	height: 60px;
-	margin: 10px 0;
+	margin: 10px 0px 0px 100px;
 	background-position: center;
     position:absolute;
-	left : 870px;
+	/* left : 870px; */
 }
 
 #Timeline {
@@ -609,8 +614,8 @@ td{
 
 		width: 30px;
 		height: 30px;
-		margin-top: 30px;
-		left : 85%;
+		margin: 0% 0% 0% 0%;
+		/* left : 85%; */
 	}
 
 	#Timeline {
