@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
 	<link media="screen" href="style.css" rel="stylesheet" type="text/css" >
@@ -10,8 +11,6 @@
 
 </style>
 
-
-</style>
 <body>
 
 
@@ -103,8 +102,7 @@
 
 
 
-
-<div id="ecrit">
+<div id="ecrit" style="display: none;">
 	<h2>Ecriture</h2>
 	<div id="Ecriture">
 		<table id="table_st">
@@ -136,9 +134,9 @@
 
 		<label for="subtitles"></label>
 
-		<textarea id="subtitles" style="display: none;" name="subtitles">
-		pas info
-		</textarea>
+
+			<textarea id="subtitles" style="display: none;" name="subtitles">
+			</textarea>
 
 		<div>
 		<input type="text" id="Temps" name="Temps">
@@ -152,27 +150,22 @@
 
 
 
-<div id="timlin">
+<div id="timlin" style="display: none;">
 	<h2>Timeline</h2>
 	<div id="Timeline">
 
-			<div>
-				<<<<<<< HEAD
-						<img id="imgSource" src="image/mqposition.svg" style="display:none;"/>
+					<div>
+					 <img id="imgSource" src="image/mqposition.svg" style="display:none;"/>
+					
+						<canvas id="marqueurdepositioncanva" width="886" height="34">
+						Your browser does not support the canvas element.
+						</canvas>
+					</div>
 						
-							<canvas id="marqueurdepositioncanva" 
-							style="border:1px solid #c3c3c3;">
-							Your browser does not support the canvas element.
-							</canvas>
-				=======
-						<input type="button" name="marqueur de position " id="marqueur_deposition">
-				>>>>>>> parent of c22d320 (Merge branch 'main' of https://github.com/Sletty4/N3_webdev_H1Z1)
-			</div>
-			
-				<canvas id="Timelinebar1" 
-				style="border:1px solid #c3c3c3;">
-				Your browser does not support the canvas element.
-				</canvas>
+						<canvas id="Timelinebar1" width="886" height="15"
+			style="border:1px solid #c3c3c3;">
+			Your browser does not support the canvas element.
+			</canvas>
 
 
 			

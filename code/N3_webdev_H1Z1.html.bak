@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+	<link media="screen" href="style.css" rel="stylesheet" type="text/css" >
+
 </head>
 <style>
 
 </style>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
-</style>
 <body>
 
 
@@ -17,185 +19,187 @@
 <h1>Groupe H1Z1</h1>
 </div>
 
+
 <div id="video_info">
-<figure id="video_player">
+	<div class="flexwrap">
+		<div class="wrapper">
+			<figure id="video_player">
+
+				
 
 
+					<figcaption>
+						<div id="preview">
+							<div id="preview_video">
+								<h2>Videos :</h2>
+							</div>
+							<div id="vidpre">
+								<input type="image" src="image/BigBuckBunny_512kb.jpg" id="btvid1">
+								<input type="image" src="image/Python_512kb.jpg" id="btvid2" >
+								<input type="image" src="image/ed_hd_512kb.jpg" id="btvid3">
+							</div>
+						</div>
+					</figcaption>
 
+				
 
-<figcaption>
-<div id="preview_video">
-<h2>Videos :</h2>
-</div>
-<input type="image" src="image/BigBuckBunny_512kb.jpg" id="btvid1" width="160" height="120">
-<input type="image" src="image/Python_512kb.jpg" id="btvid2" width="160" height="120">
-<input type="image" src="image/ed_hd_512kb.jpg" id="btvid3" width="160" height="120">
-</figcaption>
+				<video  id="myvideo" controls ontimeupdate="onTimeUpdate(event)" >
+				<source src="" type="video/mp4">
+				<track default id="subtrack" kind="subtitles" srclang="fr" label="Anglais" src="">
+					Your browser does not support the video tag.
+				</video>
 
+			</figure>
+		</div>
+		<div class="wrapper">
+			<div id="gr_info">
 
+				<h2>Informations</h2>
 
-<video width="709px" height="313px" id="myvideo" controls ontimeupdate="onTimeUpdate(event)" >
-  <source src="" type="video/mp4">
-  <track default id="subtrack" kind="subtitles" srclang="fr" label="Anglais" src="">
-    Your browser does not support the video tag.
-</video>
-
-</figure>
-
-
-<div id="gr_info">
-
-<h2>Informations</h2>
-
-<div id="Informations">
-<h4>Fichier</h4>
-<div id="nom_video">NOM</div>
-<h4>Durée</h4>
-<div id="duree_video">DUREE</div>
-<h4>Actuel</h4>
-<div id="current_time">00:00:00</div>
-<h4>Sous-titre</h4>
-<div id="current_time">(aucun)</div>
-</div>
-
-</div>
+				<div id="Informations">
+					<h4>Fichier</h4>
+					<div id="nom_video">NOM</div>
+					<h4>Durée</h4>
+					<div id="duree_video">DUREE</div>
+					<h4>Actuel</h4>
+					<div id="current_time">00:00:00</div>
+					<h4>Sous-titre</h4>
+					<div id="current_time">(aucun)</div>
+				</div>
+			</div>	
+		</div>
+	</div>
 </div>
 
 
 <div id="vid_st">
-
-<div id="optvid">
-<h2>Video</h2>
-<div id="Video_button">
-<input type="button" name="btplay" id="btplay">
-<input type="button" name="btrewind" id="btrewind">
-<input type="button" name="btforward" id="btforward">
-<input type="button" name="btprec" id="btprec">
-<input type="button" name="btsuiv" id="btsuiv">
-<input type="button" name="btstop" id="btstop">
-<input type="button" name="btpause" id="btpause">
-</div>
-</div>
-
+	<div id="optvid">
+			<h2>Video</h2>
+			<div id="Video_button">
+			<input type="button" name="btplay" id="btplay">
+			<input type="button" name="btrewind" id="btrewind">
+			<input type="button" name="btforward" id="btforward">
+			<input type="button" name="btprec" id="btprec">
+			<input type="button" name="btsuiv" id="btsuiv">
+			<input type="button" name="btstop" id="btstop">
+			<input type="button" name="btpause" id="btpause">
+		</div>
+	</div>
 
 
-<div id="stitr">
-<h2>Sous-titres</h2>
-<div id="Sous-titres">
-<input type="file" id="fileLoader" name="files" style="display: none;" title="Load File" >
-<input type="button" value="CHARGER" name="charger" id="btcharger">
-<input type="button" value="APPLIQUER" name="appliquer" id="btappliquer">
-<input type="button" value="SAUVEGARDER" name="sauvgarder" id="btsave">
-</div>
-</div>
 
+	<div id="stitr">
+		<h2>Sous-titres</h2>
+		<div id="Sous-titres">
+			<input type="file" id="fileLoader" name="files" style="display: none;" title="Load File" >
+			<input type="button" value="CHARGER" name="charger" id="btcharger">
+			<input type="button" value="APPLIQUER" name="appliquer" id="btappliquer">
+			<input type="button" value="SAUVEGARDER" name="sauvgarder" id="btsave">
+		</div>
+	</div>
 </div>
 
 
 
-<div id="ecrit">
-<h2>Ecriture</h2>
-<div id="Ecriture">
-<table id="table_st">
-<thead>
-        <tr>
-            <th id="table1">Temps</th>
-            <th id="table2">Durée</th>
-            <th id="table3">Texte</th>
-        </tr>
-    </thead>
-    <tbody id="table_stbis">
-        <tr>
-            <td id="table1bis">00:00:05</td>
-            <td id="table2bis">5s</td>
-            <td id="table3bis">Bonjour monsieur, quelle heure est-il ?</td>
-        </tr>
-        <tr>
-            <td id="table1bis">00:00:15</td>
-            <td id="table2bis">2s</td>
-            <td id="table3bis">Il est 21h15 à ma montre</td>
-        </tr>
-        <tr>
-            <td id="table1bis">00:00:17</td>
-            <td id="table2bis">2s</td>
-            <td id="table3bis">Merci Monsieur</td>
-        </tr>
-    </tbody>
-</table>
 
-<label for="subtitles"></label>
+<div id="ecrit" style="display: none;">
+	<h2>Ecriture</h2>
+	<div id="Ecriture">
+		<table id="table_st">
+		<thead>
+				<tr>
+					<th id="table1">Temps</th>
+					<th id="table2">Durée</th>
+					<th id="table3">Texte</th>
+				</tr>
+			</thead>
+			<tbody id="table_stbis">
+				<tr>
+					<td id="table1bis">00:00:05</td>
+					<td id="table2bis">5s</td>
+					<td id="table3bis">Bonjour monsieur, quelle heure est-il ?</td>
+				</tr>
+				<tr>
+					<td id="table1bis">00:00:15</td>
+					<td id="table2bis">2s</td>
+					<td id="table3bis">Il est 21h15 à ma montre</td>
+				</tr>
+				<tr>
+					<td id="table1bis">00:00:17</td>
+					<td id="table2bis">2s</td>
+					<td id="table3bis">Merci Monsieur</td>
+				</tr>
+			</tbody>
+		</table>
 
-<textarea id="subtitles" style="display: none;" name="subtitles">
-pas info
-</textarea>
-
-<div>
-<input type="text" id="Temps" name="Temps">
-<input type="text" id="Durée" name="Durée">
-<input type="text" id="Texte" name="Texte">
-<input type="button" name="btplus" id="btplus">
-</div>
-
-</div>
-</div>
+		<label for="subtitles"></label>
 
 
-
-<div id="timlin">
-<h2>Timeline</h2>
-<div id="Timeline">
+			<textarea id="subtitles" style="display: none;" name="subtitles">
+			</textarea>
 
 		<div>
-		<input type="button" name="marqueur de position " id="marqueur_deposition">
-		</div>
-		
-<<<<<<< HEAD
-		
-<<<<<<< HEAD
-			<canvas id="Timelinebar1" width="886" height="15"
-=======
-					<canvas id="Timelinebar1" width="886" height="15"
->>>>>>> parent of c22d320 (Merge branch 'main' of https://github.com/Sletty4/N3_webdev_H1Z1)
-=======
-					<canvas id="Timelinebar1" width="886" height="15"
->>>>>>> parent of 5ba3913 (bouton charger)
-			style="border:1px solid #c3c3c3;">
-			Your browser does not support the canvas element.
-			</canvas>
-
-
-		
-		
-		
-		<div id="TextUnderTimelinebar">
-					
-			<table>
-			  <tr>
-				<th>00:00:00</th>
-				<th>00:00:00</th>
-				<th id="TimelineDuration">00:00:00</th>
-			  </tr>
-			  
-			</table>
-
-		</div>
-		
-		<div id="Timelinelastbar">
-		
-             <table id="lastbarsoustitre">
-			  <tr >
-				<th>00:00:05</th>
-				<th>5s</th>
-				<th >Bonjour monsieur, quelle heure est-il ?</th>
-			  </tr>
-			  
-			</table>
-		</div>
-		
+		<input type="text" id="Temps" name="Temps">
+		<input type="text" id="Durée" name="Durée">
+		<input type="text" id="Texte" name="Texte">
+		<input type="button" name="btplus" id="btplus">
 		</div>
 
-		
+	</div>
 </div>
+
+
+
+<div id="timlin" style="display: none;">
+	<h2>Timeline</h2>
+	<div id="Timeline">
+
+					<div>
+					 <img id="imgSource" src="image/mqposition.svg" style="display:none;"/>
+					
+						<canvas id="marqueurdepositioncanva" width="886" height="34">
+						Your browser does not support the canvas element.
+						</canvas>
+					</div>
+						
+				<canvas id="Timelinebar1" 
+				style="border:1px solid #c3c3c3;">
+				Your browser does not support the canvas element.
+				</canvas>
+
+
+			
+			
+			
+				<div id="TextUnderTimelinebar">
+							
+					<table>
+					<tr>
+						<th>00:00:00</th>
+						<th>00:00:00</th>
+						<th id="TimelineDuration">00:00:00</th>
+					</tr>
+					
+					</table>
+
+				</div>
+			
+				<div id="Timelinelastbar">
+				
+					<table id="lastbarsoustitre">
+					<tr >
+						<th>00:00:00</th>
+						<th>NaN</th>
+						<th >NaN</th>
+					</tr>
+					
+					</table>
+				</div>
+			
+			</div>
+
+			
+	</div>
 </div>
 
 
